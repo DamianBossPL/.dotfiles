@@ -1,0 +1,4 @@
+export XCURSOR_THEME=Posy_Cursor
+export XCURSOR_SIZE=32
+export HYPRSHOT_DIR=Pictures/Screenshots
+export QT_QPA_PLATFORMTHEME=gtk3

@@ -1,0 +1,18 @@
+output "LG Electronics LG ULTRAGEAR 103NTXRGM474" alias $HOME_1
+output "ViewSonic Corporation VA2432-FHD W33223222034" alias $OUTSIDE_1
+
+profile Normal {
+    output eDP-1 enable mode 1920x1080@60 scale 1
+}
+profile DockedHome {
+    output eDP-1 disable
+    output $HOME_1 enable mode 1920x1080@120 scale 1
+}
+profile DockedCS {
+    output eDP-1 disable
+    output $OUTSIDE_1 enable mode 1920x1080@75 scale 1
+}
+profile DockedGeneral {
+    output eDP-1 disable
+    output HDMI-A-1 enable scale 1
+}

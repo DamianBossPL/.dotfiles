@@ -1,0 +1,20 @@
+* {
+  font-family: FontAwesome, "Fira Code";
+  font-size: 9pt;
+  color: #e6edf6;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: #010f21;
+}
+
+#workspaces {
+  margin-bottom: 0;
+  border-radius: 10px;
+  transition: none;
+}
+
+.modules-right {
+  padding-right: 16px;
+}
