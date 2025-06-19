@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 alias srv='ssh -t beacon "sudo pacman -Syu && fastfetch"'
+alias nano='vim'
 
 # Start Hyprland
 if uwsm check may-start; then
