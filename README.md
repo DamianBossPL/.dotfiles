@@ -21,9 +21,9 @@ Install script will install these packages onto the system:
   - paplay
   - thunar
   - uwsm
-  - walker
   - waybar
   - wl-clip-persist
+  - wofi
 - openssh
 - stow
 - yay
