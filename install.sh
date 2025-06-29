@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "SCRIPT BEING DEVELOPED!! REFRAIN FROM RUNNING"
+exit 1
+
 # # Help menu
 # show_help() {
 #   echo "Usage: $0 [OPTION...] [SERVICE...]"
