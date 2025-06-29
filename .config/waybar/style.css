@@ -1,20 +1,35 @@
 * {
-  font-family: FontAwesome, "Fira Code";
   font-size: 9pt;
   color: #e6edf6;
-  font-weight: bold;
 }
 
 window#waybar {
-  background-color: #010f21;
+  background-color: transparent;
 }
 
-#workspaces {
-  margin-bottom: 0;
-  border-radius: 10px;
-  transition: none;
-}
-
+.modules-left,
+.modules-center,
 .modules-right {
-  padding-right: 16px;
+  font-weight: bold;
+  background-color: #021d42;
+  border-radius: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0px 5px;
+  margin-top: 5px;
+}
+
+.modules-left {
+  padding-right: 2px;
+}
+
+#workspaces button {
+  font-weight: bold;
+  padding: 0 6px;
+  border-radius: 10px;
+  color: #cdd6f4;
+}
+
+#tray {
+  font-weight: unset;
 }

@@ -2,16 +2,14 @@
   "layer": "top",
   "spacing": 16,
   "height": 32,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window", "power-profiles-daemon"],
+  "modules-left": ["power-profiles-daemon", "hyprland/workspaces"],
+  "modules-center": ["tray"],
   "modules-right": [
     "cpu",
     "memory",
     "temperature",
     "pulseaudio",
-    "network",
     "battery",
-    "tray",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -20,7 +18,7 @@
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 8
+    "spacing": 10
     // "icons": {
     //   "blueman": "bluetooth",
     //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
