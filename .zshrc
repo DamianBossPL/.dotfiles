@@ -20,7 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 # --- User configuration --- #
 alias srv='ssh -t beacon "sudo pacman -Syu && fastfetch"'
-alias nano='vim'
 
 # Start Hyprland on login
 if uwsm check may-start; then
