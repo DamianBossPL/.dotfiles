@@ -25,7 +25,7 @@
     // }
   },
   "clock": {
-    "format": "{:%H:%M\n%d/%m/%Y}",
+    "format": "{:%H:%M}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "on-scroll": -1,

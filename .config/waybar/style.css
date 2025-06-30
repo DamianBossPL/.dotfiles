@@ -28,7 +28,3 @@ window#waybar {
   padding: 0 6px;
   border-radius: 10px;
 }
-
-#tray {
-  font-weight: unset;
-}
