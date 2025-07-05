@@ -7,7 +7,7 @@ profile HDMI {
 }
 profile HDMI-1080 {
     output eDP-1 disable
-    output HDMI-A-1 enable mode 1920x1080 scale 1
+    output HDMI-A-1 enable mode --custom 1920x1080 scale 1
 }
 profile DP {
     output eDP-1 disable
