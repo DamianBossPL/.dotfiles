@@ -13,6 +13,7 @@ Install script will install these packages onto the system:
   - cliphist
   - dunst
   - gvfs
+  - hypridle
   - hyprlock
   - hyprpaper
   - hyprpolkitagent
@@ -27,6 +28,9 @@ Install script will install these packages onto the system:
   - waybar
   - wl-clip-persist
   - wofi
+  - xdg-desktop-portal
+  - xdg-desktop-portal-gtk
+  - xdg-desktop-portal-hyprland
 - Fonts
   - ttf-fira-code
   - ttf-font-awesome
