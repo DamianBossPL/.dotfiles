@@ -12,6 +12,7 @@ Install script will install these packages onto the system:
 - hyprland
   - cliphist
   - dunst
+  - gvfs
   - hyprlock
   - hyprpaper
   - hyprpolkitagent
@@ -19,12 +20,20 @@ Install script will install these packages onto the system:
   - kanshi
   - kitty
   - paplay
+  - pavucontrol
   - thunar
+  - thunar-volman
   - uwsm
   - waybar
   - wl-clip-persist
   - wofi
+- Fonts
+  - ttf-fira-code
+  - ttf-font-awesome
+  - ttf-ms-win11-auto
+  - ttf-twemoji-color
 - openssh
+- power-profiles-daemon
 - stow
 - yay
 - zsh
