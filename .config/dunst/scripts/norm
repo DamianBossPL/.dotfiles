@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ "$1" = "discord" ]; then
+    exit 0
+fi
+paplay ~/.config/hypr/sounds/notif.ogg &
+exit 0
