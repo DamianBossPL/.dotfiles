@@ -2,11 +2,11 @@
 
 # # --- DamianBossPL's .dotfiles ---
 
-This repository contains the dotfiles that I use for my personal Arch Linux computer.
+This repository contains all of the configuration and dotfiles that I use for my personal Arch Linux computer.
 
 ## # --- Dotfiles Requirements ---
 
-Install script will install these packages onto the system:
+Here are the package requirements for my dotfiles:
 
 - git
 - hyprland
@@ -41,7 +41,7 @@ Install script will install these packages onto the system:
 - stow
 - yay
 - zsh
-  - Oh My Zsh
+  - Oh My Zsh (Not packages)
     - zsh-autosuggestions
     - zsh-syntax-highlighting
 
