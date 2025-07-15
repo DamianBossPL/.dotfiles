@@ -8,8 +8,12 @@ This repository contains all of the configuration and dotfiles that I use for my
 
 Here are the package requirements for my dotfiles:
 
+- bluez
+- bluez-obex
+- bluez-utils
 - git
 - hyprland
+  - blueman
   - cliphist
   - dunst
   - gvfs
@@ -20,6 +24,7 @@ Here are the package requirements for my dotfiles:
   - hyprshot
   - kanshi
   - kitty
+  - network-manager-applet
   - paplay
   - pavucontrol
   - thunar
