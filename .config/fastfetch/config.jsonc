@@ -3,9 +3,9 @@
   "logo": {
     "source": "~/.config/fastfetch/ascii.txt",
     "color": {
-      "1": "#1ab2e7",
-      "2": "#da578b",
-      "3": "#0549a4"
+      "1": "bright_cyan",
+      "2": "bright_magenta",
+      "3": "bright_blue"
     }
   },
   "display": {
@@ -18,7 +18,10 @@
   "modules": [
     "title",
     "separator",
-    "os",
+    {
+      "type": "os",
+      "format": "Boss Linux ({name} {arch})"
+    },
     "host",
     {
       "type": "kernel",
