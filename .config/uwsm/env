@@ -1,4 +1,14 @@
 export XCURSOR_THEME=Posy_Cursor
 export XCURSOR_SIZE=32
-export HYPRSHOT_DIR=Pictures/Screenshots
+
+export QT_QPA_PLATFORM=wayland;xcb
 export QT_QPA_PLATFORMTHEME=gtk3
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+export CLUTTER_BACKEND=wayland
+export GDK_BACKEND=wayland,x11,*
+export SDL_VIDEODRIVER=wayland
+
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
