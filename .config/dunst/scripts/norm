@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env sh
 if [ "$1" = "discord" ]; then
-    exit 0
+  exit 0
 fi
-paplay ~/.config/hypr/sounds/notif.ogg &
+canberra-gtk-play -i message-new-instant &
 exit 0

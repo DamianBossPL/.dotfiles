@@ -1,3 +1,3 @@
-#!/bin/bash
-paplay ~/.config/hypr/sounds/notif-crit.ogg &
+#!/usr/bin/env sh
+canberra-gtk-play -i message-new-instant &
 exit 0

@@ -20,10 +20,10 @@ while IFS= read -r line; do
     if [[ "$subsystem" == "usb" && "$devtype" == "usb_device" ]]; then
       # USB Plug
       if [[ "$action" == "add" ]]; then
-        paplay /home/damian/.config/hypr/sounds/insert.ogg &
+        canberra-gtk-play -i device-added &
       # USB Unlug
       elif [[ "$action" == "remove" ]]; then
-        paplay /home/damian/.config/hypr/sounds/uninsert.ogg &
+        canberra-gtk-play -i device-removed &
       fi
     fi
 
