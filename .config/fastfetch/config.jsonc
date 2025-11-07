@@ -18,10 +18,7 @@
   "modules": [
     "title",
     "separator",
-    {
-      "type": "os",
-      "format": "Boss Linux ({name} {arch})"
-    },
+    "os",
     "host",
     {
       "type": "kernel",
