@@ -1,0 +1,81 @@
+# ------------- #
+# --- Binds --- #
+# ------------- #
+
+bindsym Mod4+Shift+R reload
+
+# --- Launch Shortcuts --- #
+# Apps
+bindsym Mod4+Q exec foot
+bindsym Mod4+E exec thunar
+bindsym Mod4+Page_Up exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle
+bindsym Mod4+Page_Down exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle-pause
+bindsym Mod4+Backspace exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" replay save
+# Screenshot
+bindsym Print        exec ~/.config/river/screenshot # Screen
+bindsym Mod4+Shift+S exec ~/.config/river/screenshot 1 # Region
+bindsym Shift+Print  exec ~/.config/river/screenshot 2 # Window
+# Menus
+bindsym Mod4+V         exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
+bindsym Alt+Space      exec rofi -show drun
+bindsym Mod4+semicolon exec ~/.local/bin/wofi-emoji # Emojis TEMPORARY WOFI
+# Background
+bindsym Mod4+Shift+L exec ~/.local/bin/h6008-power 0
+bindsym Mod4+Shift+O exec ~/.local/bin/h6008-power 1
+
+
+# --- WM --- #
+bindsym Mod4+M exec swaymsg exit
+bindsym Mod4+L exec loginctl lock-session # Lock River
+bindsym Mod4+P exec systemctl sleep # G O  T O  S L E E P
+# Window Control
+bindsym Alt+F4 kill
+bindsym Mod4+S fullscreen
+bindsym Mod4+F floating toggle
+floating_modifier Mod4 normal
+
+bindsym Mod4+Left focus left
+bindsym Mod4+Down focus down
+bindsym Mod4+Up focus up
+bindsym Mod4+Right focus right
+
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+Right move right
+
+# Res Switching
+bindsym Mod4+bracketleft exec sh -c 'kanshictl switch HDMI;kanshictl switch DP'
+bindsym Mod4+bracketright exec sh -c 'kanshictl switch HDMI-1080;kanshictl switch DP-1080'
+
+# --- Unlocked Binds --- #
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym --locked XF86AudioRaiseVolume exec  wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+# Special keys to adjust brightness via brightnessctl
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 10%+
+
+# Workspace switch
+bindsym Mod4+1 workspace number 1
+bindsym Mod4+2 workspace number 2
+bindsym Mod4+3 workspace number 3
+bindsym Mod4+4 workspace number 4
+bindsym Mod4+5 workspace number 5
+bindsym Mod4+6 workspace number 6
+bindsym Mod4+7 workspace number 7
+bindsym Mod4+8 workspace number 8
+bindsym Mod4+9 workspace number 9
+bindsym Mod4+0 workspace number 10
+# Move focused to workspace
+bindsym Mod4+Shift+1 move container to workspace number 1
+bindsym Mod4+Shift+2 move container to workspace number 2
+bindsym Mod4+Shift+3 move container to workspace number 3
+bindsym Mod4+Shift+4 move container to workspace number 4
+bindsym Mod4+Shift+5 move container to workspace number 5
+bindsym Mod4+Shift+6 move container to workspace number 6
+bindsym Mod4+Shift+7 move container to workspace number 7
+bindsym Mod4+Shift+8 move container to workspace number 8
+bindsym Mod4+Shift+9 move container to workspace number 9
+bindsym Mod4+Shift+0 move container to workspace number 10

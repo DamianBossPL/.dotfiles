@@ -1,0 +1,11 @@
+output * bg ~/.config/sway/wallpaper fill
+
+gaps inner 5
+gaps outer 0
+
+default_border pixel 2
+
+client.focused #0549a4 #0549a4 #0549a4 #0549a4 #0549a4
+client.unfocused #032552 #032552 #032552 #032552 #032552
+client.focused_inactive #032552 #032552 #032552 #032552 #032552
+client.urgent #e33d3d #e33d3d #e33d3d #e33d3d #e33d3d

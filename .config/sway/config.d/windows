@@ -1,0 +1,4 @@
+focus_follows_mouse no
+
+for_window [class="org.vinegarhq.Sober"] floating enable
+for_window [title="Sober"] floating disable

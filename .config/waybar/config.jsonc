@@ -2,7 +2,7 @@
   "layer": "top",
   "spacing": 16,
   "height": 32,
-  "modules-left": ["power-profiles-daemon", "hyprland/workspaces"],
+  "modules-left": ["power-profiles-daemon", "sway/workspaces"],
   "modules-center": ["tray"],
   "modules-right": [
     "cpu",
@@ -12,10 +12,6 @@
     "battery",
     "clock"
   ],
-  "hyprland/workspaces": {
-    "format": "{name}",
-    "sort-by-number": true
-  },
   "tray": {
     "icon-size": 16,
     "spacing": 10

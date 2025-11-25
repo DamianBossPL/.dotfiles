@@ -1,53 +1,43 @@
-# INCOMPLETE
+# UNFINISHED
 
-# # --- DamianBossPL's .dotfiles ---
+# DamianBossPL's .dotfiles
 
 This repository contains all of the configuration and dotfiles that I use for my personal Arch Linux computer.
 
-## # --- Dotfiles Requirements ---
-
-Here are the package requirements for my dotfiles:
+## Required Packages
 
 - bluez
 - bluez-obex
 - bluez-utils
 - git
-- hyprland
+- openssh
+- stow
+- sway
+
   - blueman
   - cliphist
   - dunst
   - gvfs
-  - hypridle
-  - hyprlock
-  - hyprpaper
-  - hyprpolkitagent
-  - hyprshot
   - kanshi
-  - kitty
   - network-manager-applet
-  - paplay
   - pavucontrol
+  - power-profiles-daemon
+  - rofi
   - thunar
   - thunar-volman
-  - uwsm
+  - ttf-fira-code
+  - ttf-font-awesome
+  - ttf-ms-win11-auto
+  - ttf-twemoji-color
   - waybar
   - wl-clip-persist
   - wofi
   - xdg-desktop-portal
   - xdg-desktop-portal-gtk
   - xdg-desktop-portal-hyprland
-- Fonts
-  - ttf-fira-code
-  - ttf-font-awesome
-  - ttf-ms-win11-auto
-  - ttf-twemoji-color
-- openssh
-- power-profiles-daemon
-- stow
+
 - yay
 - zsh
   - Oh My Zsh (Not packages)
     - zsh-autosuggestions
     - zsh-syntax-highlighting
-
-## # --- ---
