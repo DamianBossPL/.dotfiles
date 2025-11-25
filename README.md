@@ -15,6 +15,7 @@ This repository contains all of the configuration and dotfiles that I use for my
 - sway
 
   - blueman
+  - cava
   - cliphist
   - dunst
   - gvfs
