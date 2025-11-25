@@ -12,9 +12,9 @@ bindsym Mod4+Page_Up exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_pa
 bindsym Mod4+Page_Down exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle-pause
 bindsym Mod4+Backspace exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" replay save
 # Screenshot
-bindsym Print        exec ~/.config/river/screenshot # Screen
-bindsym Mod4+Shift+S exec ~/.config/river/screenshot 1 # Region
-bindsym Shift+Print  exec ~/.config/river/screenshot 2 # Window
+bindsym Print        exec ~/.config/sway/screenshot # Screen
+bindsym Mod4+Shift+S exec ~/.config/sway/screenshot 1 # Region
+bindsym Shift+Print  exec ~/.config/sway/screenshot 2 # Window
 # Menus
 bindsym Mod4+V         exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
 bindsym Alt+Space      exec rofi -show drun

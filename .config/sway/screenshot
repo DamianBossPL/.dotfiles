@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+set -e
+
+LOCATION="$HOME/Pictures/Screenshots/Screenshot $(date +%Y-%m-%d\ %H%M%S).png"
+if [ "$1" = "1" ]; then
+  SLURP="$(slurp)"
+  notify-send -u "normal" "Screenshot saved!"
+  grim -c -l 9 -g "$SLURP" "$LOCATION"
+else
+  notify-send -u "normal" "Screenshot saved!" 
+  grim -c -l 9 "$LOCATION"
+fi
+
+wl-copy --type image/png < "$LOCATION" 
