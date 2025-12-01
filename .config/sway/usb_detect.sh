@@ -21,7 +21,7 @@ while IFS= read -r line; do
       # USB Plug
       if [[ "$action" == "add" ]]; then
         canberra-gtk-play -i device-added &
-      # USB Unlug
+      # USB Unplug
       elif [[ "$action" == "remove" ]]; then
         canberra-gtk-play -i device-removed &
       fi
