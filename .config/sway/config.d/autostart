@@ -14,7 +14,7 @@ exec dunst
 # output DP-1 mode 1920x1080@144
 exec kanshi
 exec thunar --daemon
-exec ~/.config/hypr/scripts/usb_detect.sh
+exec ~/.config/sway/usb_detect.sh
 exec /usr/bin/wayvnc 0.0.0.0 5900
 # Autostart .desktop files
 exec dex --autostart --environment WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
