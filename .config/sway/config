@@ -4,6 +4,8 @@ include ~/.config/sway/config.d/binds
 include ~/.config/sway/config.d/styles
 include ~/.config/sway/config.d/windows
 
+output * adaptive_sync on
+
 ### Idle configuration
 #
 # Example configuration:
