@@ -1,11 +1,13 @@
-output * bg ~/.config/sway/wallpaper fill
+include "$HOME/.cache/wal/colors-sway"
+
+output * bg $wallpaper fill
+
+client.focused $foreground $foreground $foreground $foreground $foreground
+client.unfocused $background $background $background $background $background
+client.focused_inactive $background $background $background $background $background
+client.urgent $color1 $color1 $color1 $color1 $color1
 
 gaps inner 5
 gaps outer 0
 
-default_border pixel 2
-
-client.focused #0549a4 #0549a4 #0549a4 #0549a4 #0549a4
-client.unfocused #032552 #032552 #032552 #032552 #032552
-client.focused_inactive #032552 #032552 #032552 #032552 #032552
-client.urgent #e33d3d #e33d3d #e33d3d #e33d3d #e33d3d
+default_border pixel 1

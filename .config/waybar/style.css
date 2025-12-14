@@ -1,6 +1,8 @@
+@import "../../.cache/wal/colors-waybar.css";
+
 * {
   font-size: 9pt;
-  color: #e6edf6;
+  color: @foreground;
 }
 
 window#waybar {
@@ -11,7 +13,7 @@ window#waybar {
 .modules-center,
 .modules-right {
   font-weight: bold;
-  background-color: #021d42;
+  background-color: @background;
   border-radius: 10px;
   padding-left: 12px;
   padding-right: 12px;

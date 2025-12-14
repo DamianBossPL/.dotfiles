@@ -17,13 +17,15 @@ This repository contains all of the configuration and dotfiles that I use for my
   - blueman
   - cava
   - cliphist
-  - dunst
   - gvfs
   - kanshi
+  - mako
   - network-manager-applet
   - pavucontrol
   - power-profiles-daemon
+  - python-pywal
   - rofi
+  - rofi-emoji
   - thunar
   - thunar-volman
   - ttf-fira-code
@@ -32,7 +34,6 @@ This repository contains all of the configuration and dotfiles that I use for my
   - ttf-twemoji-color
   - waybar
   - wl-clip-persist
-  - wofi
   - xdg-desktop-portal
   - xdg-desktop-portal-gtk
   - xdg-desktop-portal-hyprland
@@ -42,3 +43,5 @@ This repository contains all of the configuration and dotfiles that I use for my
   - Oh My Zsh (Not packages)
     - zsh-autosuggestions
     - zsh-syntax-highlighting
+
+## Optional Packages

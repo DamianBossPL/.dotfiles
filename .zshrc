@@ -8,6 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export EDITOR=vim
 
+source ~/.cache/wal/colors-tty.sh
+
 # --- OMZ Configuration --- #
 ZSH_THEME="intheloop" # Theme
 COMPLETION_WAITING_DOTS="true"
