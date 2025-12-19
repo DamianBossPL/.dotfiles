@@ -11,3 +11,5 @@ gaps inner 5
 gaps outer 0
 
 default_border pixel 1
+
+for_window [app_id="code"] opacity 0.9
