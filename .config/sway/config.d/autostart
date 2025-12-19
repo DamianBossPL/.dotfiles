@@ -9,6 +9,7 @@ exec wl-paste --type image --watch cliphist store
 exec wl-clip-persist --clipboard regular
 
 exec wal -R
+exec swayidle
 exec waybar
 exec mako
 exec_always kanshictl reload
