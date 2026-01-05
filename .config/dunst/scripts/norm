@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-if [ "$1" = "discord" ]; then
-  exit 0
-fi
-canberra-gtk-play -i message-new-instant &
-exit 0

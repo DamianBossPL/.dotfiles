@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-canberra-gtk-play -i message-new-instant &
-exit 0
