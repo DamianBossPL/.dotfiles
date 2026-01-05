@@ -1,15 +1,18 @@
-#!/usr/bin/env sh
+#!/bin/sh
 set -e
 
 LOCATION="$HOME/Pictures/Screenshots/Screenshot $(date +%Y-%m-%d\ %H%M%S).png"
+# Selection
 if [ "$1" = "1" ]; then
   SLURP="$(slurp)"
   canberra-gtk-play -i screen-capture &
-  grim -c -l 9 -g "$SLURP" "$LOCATION"
+  grim -g "$SLURP" "$LOCATION"
+# Full Screen
 else
+  SCREEN=$(swaymsg -t get_outputs --raw | jq '. | map(select(.focused == true)) | .[0].name' -r)
   canberra-gtk-play -i screen-capture &
-  grim -c -l 9 "$LOCATION"
+  grim -o "$SCREEN" "$LOCATION"
 fi
 
-wl-copy --type image/png < "$LOCATION"
-notify-send -u "normal" "Screenshot saved!" 
+wl-copy < "$LOCATION"
+notify-send -u "normal" "Screenshot saved!"
