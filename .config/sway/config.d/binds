@@ -12,7 +12,7 @@ set $panic Mod4+Shift+Ctrl+Alt
 
 # --- Launch Shortcuts --- #
 # Apps
-bindsym Mod4+T exec foot
+bindsym $main+T exec foot
 bindsym $main+E exec thunar
 
 # Screenshot
@@ -23,6 +23,8 @@ bindsym $main+S exec ~/.config/sway/screenshot 1 # Region
 bindsym $main+Space    exec rofi -show drun
 bindsym $main+V        exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
 bindsym $sec+semicolon exec rofi -modi emoji -show emoji
+bindsym $context+M     exec ~/.local/bin/scripts_menu
+bindsym $context+S     exec ~/.local/bin/soundboard_menu
 # Background
 # bindsym $context+L exec ~/.local/bin/h6008-power 0
 # bindsym $context+O exec ~/.local/bin/h6008-power 1
