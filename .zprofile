@@ -1,4 +1,5 @@
 export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 export XCURSOR_THEME=Posy_Cursor
 export XCURSOR_SIZE=32
