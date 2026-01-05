@@ -12,8 +12,6 @@ exec wal -R
 exec swayidle
 exec waybar
 exec mako
-exec_always kanshictl reload
-exec kanshi
 exec thunar --daemon
 exec ~/.config/sway/usb_detect.sh
 exec /usr/bin/wayvnc 0.0.0.0 5900
