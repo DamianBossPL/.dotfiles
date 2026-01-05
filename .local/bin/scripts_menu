@@ -1,6 +1,0 @@
-#!/bin/sh
-
-DIR="$(dirname "$0")/scripts"
-SCRIPT=$(ls -p "$DIR" | grep -v / | rofi -i -dmenu)
-
-"$DIR/$SCRIPT"
