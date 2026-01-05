@@ -16,12 +16,12 @@ bindsym Mod4+T exec foot
 bindsym $main+E exec thunar
 
 # Screenshot
-bindsym Print        exec ~/.config/sway/screenshot # Screen
-bindsym $sec+S exec ~/.config/sway/screenshot 1 # Region
-bindsym Shift+Print  exec ~/.config/sway/screenshot 2 # Window
-# Menus
-bindsym Mod4+V         exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
+bindsym Print   exec ~/.config/sway/screenshot # Screen
+bindsym $main+S exec ~/.config/sway/screenshot 1 # Region
+
+# Rofi Menus
 bindsym $main+Space    exec rofi -show drun
+bindsym $main+V        exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
 bindsym $sec+semicolon exec rofi -modi emoji -show emoji
 # Background
 # bindsym $context+L exec ~/.local/bin/h6008-power 0
