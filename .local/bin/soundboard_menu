@@ -1,0 +1,6 @@
+#!/bin/sh
+
+DIR="$HOME/.local/share/soundboard"
+SOUND=$(ls -p "$DIR" | grep -v / | rofi -i -dmenu)
+
+~/.local/bin/pw-play-mic "$DIR/$SOUND"
