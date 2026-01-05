@@ -1,12 +1,11 @@
 #!/bin/bash
 
-#########################
-# --- USB Detection --- #
-#########################
+# Udev events without use of root privledges anywhere
 
+# Monitor udev events via script
 udevadm monitor --udev --property | \
 while IFS= read -r line; do
-  # Capture udev event properties
+  # --- CAPTURE EVENT PROPERTIES --- #
   if [[ "$line" == ACTION=* ]]; then
     action="${line#ACTION=}"
   elif [[ "$line" == SUBSYSTEM=* ]]; then
@@ -15,8 +14,9 @@ while IFS= read -r line; do
     devtype="${line#DEVTYPE=}"
   fi
 
-  # When we get an empty line, it means event ended, check condition
+  # On empty line (event description ended)
   if [[ -z "$line" ]]; then
+    # USB
     if [[ "$subsystem" == "usb" && "$devtype" == "usb_device" ]]; then
       # USB Plug
       if [[ "$action" == "add" ]]; then
