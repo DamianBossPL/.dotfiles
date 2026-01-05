@@ -1,9 +1,5 @@
 max-history=50
 
-background-color=#1b0f2de6
-text-color=#90ced5
-border-color=#90ced5
-
 layer=overlay
 font=Fira Code 9
 border-size=1
@@ -16,6 +12,8 @@ max-icon-size=32
 on-touch=invoke-default-action
 
 # on-notify=exec canberra-gtk-play -i message-new-instant
+
+include=~/.cache/wal/colors-mako
 
 [mode=do-not-disturb]
 invisible=1
