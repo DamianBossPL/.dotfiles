@@ -10,7 +10,7 @@ export ELECTRON_OZONE_PLATFORM_HINT=wayland
 
 export WLR_NO_HARDWARE_CURSORS=1
 
-# Start River on tty1 on login
+# Start Sway on tty1
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
   XDG_CURRENT_DESKTOP=sway exec sway
 fi
