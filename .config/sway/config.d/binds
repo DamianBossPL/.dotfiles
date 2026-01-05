@@ -37,6 +37,7 @@ bindsym $panic+P exec ~/.local/bin/find-phone
 bindsym Alt+F4 kill
 bindsym $main+S fullscreen
 bindsym $main+F floating toggle
+bindsym $main+P sticky toggle
 floating_modifier $main normal
 
 bindsym $main+J focus left
