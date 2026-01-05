@@ -18,7 +18,6 @@ This repository contains all of the configuration and dotfiles that I use for my
   - cava
   - cliphist
   - gvfs
-  - kanshi
   - mako
   - network-manager-applet
   - pavucontrol
