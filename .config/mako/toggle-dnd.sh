@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Argument 1
 # none -> toggle DND

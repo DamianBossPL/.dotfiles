@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 LOCATION="$HOME/Pictures/Screenshots/Screenshot $(date +%Y-%m-%d\ %H%M%S).png"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DIR="$HOME/.local/share/soundboard"
 SOUND=$(ls -p "$DIR" | grep -v / | rofi -i -dmenu)
