@@ -12,4 +12,6 @@ gaps outer 0
 
 default_border pixel 1
 
+focus_follows_mouse no
+
 for_window [app_id="code"] opacity 0.9

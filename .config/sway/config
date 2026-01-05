@@ -1,5 +1,6 @@
 include /etc/sway/config.d/*.conf
 
+output eDP-1 pos 0 0
 output * adaptive_sync on
 
 include ~/.config/sway/config.d/*
