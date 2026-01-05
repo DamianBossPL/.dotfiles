@@ -15,6 +15,7 @@ exec mako
 exec thunar --daemon
 exec ~/.config/sway/usb_detect.sh
 exec /usr/bin/wayvnc 0.0.0.0 5900
+exec gamemoded
 # Autostart .desktop files
 exec dex --autostart --environment WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
 
