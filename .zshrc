@@ -65,8 +65,8 @@ else
   PROMPT_COLOR="green"
 fi
 PROMPT='
-[%F{$PROMPT_COLOR}%n@%m%f] %F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f
-%# '
+[%F{$PROMPT_COLOR}%n@%m%f%(?.. %F{red}%?%f)] %F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f
+%(!.#.$) '
 
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
