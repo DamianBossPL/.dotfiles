@@ -17,7 +17,7 @@ bindsym $main+E exec thunar
 
 # Screenshot
 bindsym Print   exec ~/.config/sway/screenshot # Screen
-bindsym $main+Print exec ~/.config/sway/screenshot 1 # Region
+bindsym $sec+S exec ~/.config/sway/screenshot 1 # Region
 
 # Rofi Menus
 bindsym $main+Space    exec rofi -show drun
