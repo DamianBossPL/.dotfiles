@@ -1,5 +1,5 @@
 # Terminal colors
-source ~/.cache/wal/colors-tty.sh
+[[ -f ~/.cache/wal/colors-tty.sh ]] && source ~/.cache/wal/colors-tty.sh
 
 # Env
 export EDITOR=vim
