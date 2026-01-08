@@ -4,12 +4,33 @@
 # Env
 export EDITOR=vim
 
-# Completion
-autoload -Uz compinit
-compinit
+# --- Useful Options --- #
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt CORRECT
+setopt NO_BEEP
+setopt INTERACTIVE_COMMENTS
 
-# Keybinding
+# --- Completion --- #
+autoload -Uz compinit && compinit
+zmodload zsh/complist
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# Group completions by category (files, commands, etc)
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+
+# --- Keybinding --- #
 bindkey -e
+# Filter history by prompt
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '^[[A' up-line-or-beginning-search # Up Arrow
+bindkey '^[[B' down-line-or-beginning-search # Down Arrow
 
 # Git Info
 autoload -Uz vcs_info
