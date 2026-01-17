@@ -3,4 +3,9 @@
 DIR="$(dirname "$0")/scripts"
 SCRIPT=$(ls -p "$DIR" | grep -v / | rofi -i -dmenu)
 
-"$DIR/$SCRIPT"
+if [ -z $SCRIPT ]; then exit; fi
+
+SCRIPT_PATH="$DIR/$SCRIPT"
+echo "$SCRIPT_PATH" > ~/.last_script
+
+"$SCRIPT_PATH"

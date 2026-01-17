@@ -3,4 +3,9 @@
 DIR="$HOME/.local/share/soundboard"
 SOUND=$(ls -p "$DIR" | grep -v / | rofi -i -dmenu)
 
-~/.local/bin/pw-play-mic "$DIR/$SOUND"
+if [ -z $SOUND ]; then exit; fi
+
+SOUND_PATH="$DIR/$SOUND"
+echo "$SOUND_PATH" > ~/.last_soundboard
+
+~/.local/bin/pw-play-mic "$SOUND_PATH"
