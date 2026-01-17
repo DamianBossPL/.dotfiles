@@ -25,6 +25,8 @@ bindsym $main+V        exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cli
 bindsym $sec+semicolon exec rofi -modi emoji -show emoji
 bindsym $context+M     exec ~/.local/bin/scripts_menu
 bindsym $context+S     exec ~/.local/bin/soundboard_menu
+bindsym $context+A     exec pw-play-mic "$(cat ~/.last_soundboard)"
+bindsym $context+Z     exec killall pw-play-mic
 # Background
 # bindsym $context+L exec ~/.local/bin/h6008-power 0
 # bindsym $context+O exec ~/.local/bin/h6008-power 1
