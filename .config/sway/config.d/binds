@@ -86,15 +86,11 @@ bindsym $sec+8 move container to workspace number 8
 bindsym $sec+9 move container to workspace number 9
 bindsym $sec+0 move container to workspace number 10
 
-# --- Modes --- #
 # OBS Controls
-bindsym $main+O mode "obs"
-mode "obs" {
-  bindsym Escape mode "default"
-  bindsym O exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle
-  bindsym I exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle-pause
-  bindsym P exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" replay save
-}
+bindsym $main+BRACKETLEFT exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle
+bindsym $main+BRACKETRIGHT exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" recording toggle-pause
+bindsym $main+RETURN exec obs-cmd -w "obsws://localhost:6767/$(jq -r '.server_password' ~/.config/obs-studio/plugin_config/obs-websocket/config.json)" replay save
+
 # Guest/Restricted Mode
 bindsym $panic+g exec killall waybar; exec ~/.config/mako/toggle-dnd.sh 1; mode "guest"
 mode "guest" {
