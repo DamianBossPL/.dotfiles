@@ -7,10 +7,16 @@ client.unfocused $background $background $background $background $background
 client.focused_inactive $background $background $background $background $background
 client.urgent $color1 $color1 $color1 $color1 $color1
 
+font "Fira Code" 9
+titlebar_border_thickness 0
+titlebar_padding 0 0
+
 gaps inner 5
 gaps outer 0
 
 default_border pixel 1
+default_floating_border pixel 0
+floating_maximum_size -1 x -1
 
 focus_follows_mouse no
 
