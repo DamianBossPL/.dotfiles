@@ -1,0 +1,58 @@
+# Core UI Colors
+FG={background.strip}
+BG={foreground.strip}
+TXT_FG={background.strip}
+TXT_BG={foreground.strip}
+MENU_FG={background.strip}
+MENU_BG={foreground.strip}
+
+# Accents & Selections
+ACCENT_BG={color2.strip}
+SEL_BG={color2.strip}
+SEL_FG={background.strip}
+
+# Caret
+CARET1_FG={foreground.strip}
+CARET2_FG={foreground.strip}
+CARET_SIZE=0.04
+
+# Buttons & Headers
+BTN_BG={background.strip}
+BTN_FG={color2.strip}
+HDR_BG={background.strip}
+HDR_FG={foreground.strip}
+HDR_BTN_BG={background.strip}
+HDR_BTN_FG={color1.strip}
+
+# Terminal Colors
+TERMINAL_BACKGROUND={background.strip}
+TERMINAL_FOREGROUND={foreground.strip}
+TERMINAL_COLOR0={color0.strip}
+TERMINAL_COLOR1={color1.strip}
+TERMINAL_COLOR2={color2.strip}
+TERMINAL_COLOR3={color3.strip}
+TERMINAL_COLOR4={color4.strip}
+TERMINAL_COLOR5={color5.strip}
+TERMINAL_COLOR6={color6.strip}
+TERMINAL_COLOR7={color7.strip}
+TERMINAL_COLOR8={color8.strip}
+TERMINAL_COLOR9={color9.strip}
+TERMINAL_COLOR10={color10.strip}
+TERMINAL_COLOR11={color11.strip}
+TERMINAL_COLOR12={color12.strip}
+TERMINAL_COLOR13={color13.strip}
+TERMINAL_COLOR14={color14.strip}
+TERMINAL_COLOR15={color15.strip}
+
+# Theme Logic & Constraints
+NAME="pywal"
+THEME_STYLE=oomox
+GTK3_GENERATE_DARK=True
+ROUNDNESS=0
+SPACING=3
+OUTLINE_WIDTH=0
+BTN_OUTLINE_WIDTH=0
+ICONS_STYLE=archdroid
+ICONS_ARCHDROID={color2.strip}
+WM_BORDER_FOCUS=ff0000
+WM_BORDER_UNFOCUS=00ff00
