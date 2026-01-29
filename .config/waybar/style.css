@@ -1,10 +1,5 @@
 @import "../../.cache/wal/colors-waybar.css";
 
-* {
-  font-size: 9pt;
-  color: @foreground;
-}
-
 window#waybar {
   background-color: transparent;
 }
@@ -23,11 +18,13 @@ window#waybar {
 }
 
 .modules-left {
-  padding-right: 2px;
+  padding-right: 0px;
 }
 
 #workspaces button {
   font-weight: bold;
   padding: 0 6px;
-  border-radius: 10px;
+  border-radius: 0px;
+  color: @foreground;
+  transition: none;
 }
