@@ -18,7 +18,6 @@ exec /usr/bin/wayvnc 0.0.0.0 5900
 exec gamemoded
 # Autostart .desktop files
 exec dex --autostart --environment WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
-exec obs --minimize-to-tray --startreplaybuffer 
 
 # Boot sound
 exec canberra-gtk-play -i desktop-login
