@@ -14,6 +14,7 @@ exec waybar
 exec mako
 exec thunar --daemon
 exec ~/.config/sway/usb_detect
+exec ~/.config/sway/fix-sway-sharescreen
 exec /usr/bin/wayvnc 0.0.0.0 5900
 exec gamemoded
 # Autostart .desktop files
