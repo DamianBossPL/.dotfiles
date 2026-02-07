@@ -23,3 +23,4 @@ focus_follows_mouse no
 for_window [app_id="code"] opacity 0.9
 for_window [app_id="thunar"] opacity 0.9
 for_window [app_id="gcr-prompter"] opacity 0.9
+for_window [app_id="xdg-desktop-portal-gtk"] opacity 0.9
