@@ -4,14 +4,15 @@
 
 This repository contains all of the **dotfiles** that I use for my Linux setup.
 
-| Component             | Tool / Setup                  |
-| --------------------- | ----------------------------- |
-| Window Manager        | Sway                          |
-| Status Bar            | Waybar                        |
-| Menus                 | Rofi                          |
-| Notification Daemon   | SwayNC                        |
-| Shell                 | Fish                          |
-| Core Packages & Tools | See below / Required Packages |
+| Component           | Name                     |
+| ------------------- | ------------------------ |
+| Window Manager      | Sway                     |
+| Status Bar          | Waybar                   |
+| Notification Daemon | SwayNC                   |
+| Menus               | Rofi                     |
+| Font                | FiraCode Nerd Font Propo |
+| File Manager        | Thunar                   |
+| Shell               | Fish                     |
 
 ## Install
 
