@@ -25,8 +25,7 @@ yay -S ttf-fira-code otf-font-awesome ttf-ms-win11-auto ttf-twemoji-color bluez 
 
 ### Fonts
 
-- ttf-fira-code
-- otf-font-awesome
+- ttf-firacode-nerd
 - ttf-ms-win11-auto
 - ttf-twemoji-color
 
@@ -39,6 +38,7 @@ yay -S ttf-fira-code otf-font-awesome ttf-ms-win11-auto ttf-twemoji-color bluez 
 
 ### General CLI
 
+- fish
 - git
 - openssh
 - stow

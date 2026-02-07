@@ -7,7 +7,7 @@ client.unfocused $background $background $background $background $background
 client.focused_inactive $background $background $background $background $background
 client.urgent $color1 $color1 $color1 $color1 $color1
 
-font "Fira Code" 9
+font "FiraCode Nerd Font Propo" 9
 titlebar_border_thickness 0
 titlebar_padding 0 0
 
