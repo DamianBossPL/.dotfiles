@@ -11,7 +11,6 @@ exec wl-clip-persist --clipboard regular
 exec wal -R
 exec swayidle
 exec waybar
-exec mako
 exec thunar --daemon
 exec ~/.config/sway/usb_detect
 exec ~/.config/sway/fix-sway-sharescreen

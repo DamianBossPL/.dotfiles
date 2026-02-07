@@ -9,8 +9,8 @@ This repository contains all of the **dotfiles** that I use for my Linux setup.
 | Window Manager        | Sway                          |
 | Status Bar            | Waybar                        |
 | Menus                 | Rofi                          |
-| Notification Daemon   | Mako                          |
-| Shell                 | Zsh + Oh My Zsh               |
+| Notification Daemon   | SwayNC                        |
+| Shell                 | Fish                          |
 | Core Packages & Tools | See below / Required Packages |
 
 ## Install
@@ -18,7 +18,7 @@ This repository contains all of the **dotfiles** that I use for my Linux setup.
 ### Arch Linux - yay
 
 ```sh
-yay -S ttf-fira-code otf-font-awesome ttf-ms-win11-auto ttf-twemoji-color bluez bluez-obex bluez-utils blueman git openssh stow yay zsh cava cliphist gvfs mako network-manager-applet pavucontrol power-profiles-daemon python-pywal rofi rofi-emoji sway thunar thunar-volman waybar wl-clip-persist xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+yay -S ttf-firacode-nerd ttf-ms-win11-auto ttf-twemoji-color bluez bluez-obex bluez-utils blueman fish git openssh stow yay cava cliphist gvfs mako network-manager-applet pavucontrol power-profiles-daemon python-pywal rofi rofi-emoji sway thunar thunar-volman waybar wl-clip-persist xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
 ```
 
 ## Packages
@@ -43,7 +43,6 @@ yay -S ttf-fira-code otf-font-awesome ttf-ms-win11-auto ttf-twemoji-color bluez 
 - openssh
 - stow
 - yay
-- zsh
 
 ### General GUI
 
