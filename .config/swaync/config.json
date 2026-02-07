@@ -5,11 +5,13 @@
   "control-center-margin-right": 5,
   "control-center-margin-left": 0,
   "notification-inline-replies": true,
-  "control-center-width": 400,
-  "notification-window-width": 300,
+  "control-center-width": 450,
+  "notification-window-width": 400,
   "notification-grouping": false,
   "transition-time": 0,
   "hide-on-action": false,
+  "timeout-low": 4,
+  "timeout": 8,
   "widget-config": {
     "inhibitors": {
       "clear-all-button": false
