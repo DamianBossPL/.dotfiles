@@ -21,6 +21,7 @@ bindsym $sec+S exec ~/.config/sway/screenshot 1 # Region
 
 # Rofi Menus
 bindsym $main+Space    exec rofi -show drun
+bindsym $main+C        exec swaync-client -t
 bindsym $main+V        exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
 bindsym $main+semicolon exec rofi -modi emoji -show emoji
 bindsym $context+M     exec ~/.local/bin/scripts_menu
