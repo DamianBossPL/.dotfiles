@@ -18,7 +18,7 @@
     "format": "<span size='11pt'>{icon}</span>",
     "format-icons": {
       "notification": "󱅫",
-      "none": "",
+      "none": "󰂜",
       "dnd-notification": "󰂠",
       "dnd-none": "󰪓",
       "inhibited-notification": "󰂛",
