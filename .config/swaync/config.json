@@ -20,29 +20,29 @@
   "script-fail-notify": false,
   "scripts": {
     "notification-sound-by-name": {
-      "exec": "canberra-gtk-play -i \"$SWAYNC_SOUND_NAME\"",
+      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i \"$SWAYNC_SOUND_NAME\"",
       "run-on": "receive",
       "sound-name": ".*"
     },
     "notification-sound-by-file": {
-      "exec": "canberra-gtk-play -f \"$SWAYNC_SOUND_FILE\"",
+      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -f \"$SWAYNC_SOUND_FILE\"",
       "run-on": "receive",
       "sound-file": ".*"
     },
     "notification-sound-low": {
-      "exec": "canberra-gtk-play -i message",
+      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i message",
       "run-on": "receive",
       "urgency": "Low",
       "app-name": "^(?!discord|Spotify).*$"
     },
     "notification-sound-normal": {
-      "exec": "canberra-gtk-play -i message-new-instant",
+      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i message-new-instant",
       "run-on": "receive",
       "urgency": "Normal",
       "app-name": "^(?!discord|Spotify).*$"
     },
     "notification-sound-critical": {
-      "exec": "canberra-gtk-play -i dialog-error",
+      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i dialog-error",
       "run-on": "receive",
       "urgency": "Critical",
       "app-name": "^(?!discord|Spotify).*$"
