@@ -10,6 +10,7 @@ exec wl-clip-persist --clipboard regular
 
 exec wal -R
 exec swayidle
+exec /usr/lib/polkit-kde-authentication-agent-1
 exec waybar
 exec thunar --daemon
 exec ~/.config/sway/usb_detect
