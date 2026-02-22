@@ -11,8 +11,7 @@ window#waybar {
   background-color: @background;
   opacity: 0.9;
   border-radius: 0px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 0px 12px;
   margin: 0px 5px;
   margin-top: 5px;
 }
@@ -22,9 +21,23 @@ window#waybar {
 }
 
 #workspaces button {
-  font-weight: bold;
-  padding: 0 6px;
-  border-radius: 0px;
+  all: unset;
+  padding: 0 10px;
   color: @foreground;
-  transition: none;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background: @color2;
+  color: @background;
+}
+
+#workspaces button.urgent {
+  background: @color3;
+  color: @background;
+}
+
+#workspaces button:hover {
+  background: @foreground;
+  color: @background;
 }
