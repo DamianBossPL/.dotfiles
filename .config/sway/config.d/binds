@@ -20,17 +20,19 @@ bindsym Print   exec ~/.config/sway/screenshot # Screen
 bindsym $sec+S exec ~/.config/sway/screenshot 1 # Region
 
 # Rofi Menus
-bindsym $main+Space    exec rofi -show drun
-bindsym $main+C        exec swaync-client -t
-bindsym $main+V        exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
-bindsym $main+semicolon exec rofi -modi emoji -show emoji
-bindsym $context+M     exec ~/.local/bin/scripts_menu
-bindsym $context+S     exec ~/.local/bin/soundboard_menu
-bindsym $context+A     exec pw-play-mic "$(cat ~/.last_soundboard)"
-bindsym $context+Z     exec killall pw-play-mic
+bindsym $main+Space             exec rofi -show drun
+bindsym $main+C                 exec swaync-client -t
+bindsym $main+V                 exec cliphist list | rofi -dmenu -i -p 'Clipboard:' | cliphist decode | wl-copy
+bindsym $main+semicolon         exec rofi -modi emoji -show emoji
+bindsym $context+M              exec ~/.local/bin/scripts_menu
+bindsym $context+S              exec ~/.local/bin/soundboard_menu
+bindcode --whole-window Alt+276 exec pw-play-mic "$(cat ~/.last_soundboard)"
+bindsym $context+A              exec pw-play-mic "$(cat ~/.last_soundboard)"
+bindcode --whole-window Alt+275 exec killall pw-play-mic
+bindsym $context+Z              exec killall pw-play-mic
 # Background
-# bindsym $context+L exec ~/.local/bin/h6008-power 0
-# bindsym $context+O exec ~/.local/bin/h6008-power 1
+# bindsym $context+L            exec ~/.local/bin/h6008-power 0
+# bindsym $context+O            exec ~/.local/bin/h6008-power 1
 
 
 # --- WM --- #
