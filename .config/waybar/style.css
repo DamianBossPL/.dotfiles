@@ -22,7 +22,7 @@ window#waybar {
 
 #workspaces button {
   all: unset;
-  padding: 0 10px;
+  padding: 0 3px;
   color: @foreground;
 }
 
