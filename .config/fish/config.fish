@@ -29,6 +29,9 @@ if status is-interactive
   alias l='ls -l'
   alias la='ls -la'
   alias grep='grep --color=auto'
+  alias fuck='sudo'
+
+  fastfetch
 end
 
 
