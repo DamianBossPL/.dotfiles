@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "spacing": 16,
+  "spacing": 12,
   "height": 32,
   "modules-left": ["power-profiles-daemon", "sway/workspaces"],
   "modules-center": ["tray"],
@@ -66,7 +66,7 @@
     "format-icons": ["", "", ""]
   },
   "battery": {
-    "interval": 1,
+    "interval": 10,
     "states": {
       "warning": 15,
       "critical": 5
@@ -75,17 +75,16 @@
     "format-full": "󰁹 {capacity}% ",
     "format-charging": "{icon} {capacity}%",
     "format-plugged": " {capacity}%",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
     "format-icons": {
       "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
-      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "not-charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
     }
   },
   "cpu": {
     "interval": 1,
     "tooltip": false,
-    "format": " {usage}%\t{avg_frequency}GHz"
+    "format": " {usage}%  {avg_frequency} GHz"
   },
   "memory": {
     "interval": 1,
