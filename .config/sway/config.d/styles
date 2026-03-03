@@ -11,16 +11,23 @@ font "Agave Nerd Font Propo" 10
 titlebar_border_thickness 0
 titlebar_padding 0 0
 
-gaps inner 5
+gaps inner 8
 gaps outer 0
 
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
 floating_maximum_size -1 x -1
+
+corner_radius 16
+
+blur enable
+blur_xray off
+blur_passes 3
+blur_radius 10
 
 focus_follows_mouse no
 
-for_window [app_id="code"] opacity 0.9
+# for_window [app_id="code"] opacity 0.63
 for_window [app_id="thunar"] opacity 0.9
-for_window [app_id="gcr-prompter"] opacity 0.9
+for_window [app_id="gcr-prompter"] opacity 0.63
 for_window [app_id="xdg-desktop-portal-gtk"] opacity 0.9
