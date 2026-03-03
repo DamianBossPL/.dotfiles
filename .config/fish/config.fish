@@ -14,6 +14,8 @@ set -gx EDITOR vim
 if status is-login
   # Start Sway on tty1 
   if test -z "$WAYLAND_DISPLAY" -a (tty) = "/dev/tty1"
+    set -gx XDG_CURRENT_DESKTOP sway
+    dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP
     exec sway
   end
 end
