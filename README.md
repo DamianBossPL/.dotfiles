@@ -6,7 +6,7 @@ This repository contains all of the **dotfiles** that I use for my Linux setup.
 
 | Component           | Name                     |
 | ------------------- | ------------------------ |
-| Window Manager      | Sway                     |
+| Window Manager      | SwayFX                   |
 | Status Bar          | Waybar                   |
 | Notification Daemon | SwayNC                   |
 | Menus               | Rofi                     |
