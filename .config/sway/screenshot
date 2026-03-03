@@ -1,10 +1,18 @@
 #!/bin/bash
-set -e
 
 LOCATION="$HOME/Pictures/Screenshots/Screenshot $(date +%Y-%m-%d\ %H%M%S).png"
-# Selection
+
+# Region
 if [ "$1" = "1" ]; then
+  hyprpicker -rz &
+  sleep 0.1
+
   SLURP="$(slurp)"
+  STATUS=$?
+  pkill hyprpicker
+
+  if [ $STATUS -ne 0 ]; then exit; fi
+
   canberra-gtk-play -i screen-capture &
   grim -g "$SLURP" "$LOCATION"
 # Full Screen
@@ -15,4 +23,4 @@ else
 fi
 
 wl-copy < "$LOCATION"
-notify-send -u "normal" "Screenshot saved!"
+notify-send -u "normal" "Screenshot saved" "Image copied to the clipboard"
