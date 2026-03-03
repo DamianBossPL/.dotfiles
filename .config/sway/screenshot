@@ -5,7 +5,7 @@ LOCATION="$HOME/Pictures/Screenshots/Screenshot $(date +%Y-%m-%d\ %H%M%S).png"
 # Region
 if [ "$1" = "1" ]; then
   hyprpicker -rz &
-  sleep 0.1
+  sleep 0.02
 
   SLURP="$(slurp)"
   STATUS=$?
