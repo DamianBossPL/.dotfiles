@@ -4,6 +4,8 @@
 
 This repository contains all of the **dotfiles** that I use for my Linux setup.
 
+![Image of my desktop, featuring Visual Studio Code, btop, and foot terminal with fastfetch and fish](./desktop.png)
+
 | Component           | Name                     |
 | ------------------- | ------------------------ |
 | Window Manager      | SwayFX                   |
