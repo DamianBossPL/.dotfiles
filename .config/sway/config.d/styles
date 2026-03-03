@@ -22,8 +22,8 @@ corner_radius 16
 
 blur enable
 blur_xray off
-blur_passes 3
-blur_radius 10
+blur_passes 2
+blur_radius 5
 
 focus_follows_mouse no
 
