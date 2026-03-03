@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WAL_FILE="$HOME/.cache/wal/colors"
+
+BG=$(sed -n '1p' "$WAL_FILE")
+FG=$(sed -n '8p' "$WAL_FILE")
+
+exec /usr/bin/slurp -b "${BG}a1" -c "${FG}ff" -B "${FG}a1" "$@"
