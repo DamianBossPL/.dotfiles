@@ -2,15 +2,13 @@
 
 :root {
   --notification-icon-size: 32px;
-  --font-family: "FiraCode Nerd Font Propo";
   --bg-color: var(--background);
   --text-color: var(--foreground);
   --border-color: var(--foreground);
 }
 
 * {
-  font-family: var(--font-family);
-  font-size: 9pt;
+  font-size: 10pt;
   border-radius: 0;
 }
 

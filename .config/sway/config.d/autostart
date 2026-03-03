@@ -17,8 +17,6 @@ exec ~/.config/sway/usb_detect
 exec ~/.config/sway/fix-sway-sharescreen
 exec /usr/bin/wayvnc 0.0.0.0 5900
 exec gamemoded
-# Autostart .desktop files
-exec dex --autostart --environment WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
 
 # Boot sound
 exec canberra-gtk-play -i desktop-login
