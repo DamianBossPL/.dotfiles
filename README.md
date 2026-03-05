@@ -21,7 +21,7 @@ This repository contains all of the **dotfiles** that I use for my Linux setup.
 ### Arch Linux - yay
 
 ```sh
-yay -S ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color bluez bluez-obex bluez-utils blueman fish git openssh stow yay cliphist gvfs hyprpicker hyprpolkitagent network-manager-applet pavucontrol power-profiles-daemon python-pywal rofi rofi-emoji swayfx swatnc sway-systemd thunar thunar-volman waybar wl-clip-persist xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+yay -S ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color bluez bluez-obex bluez-utils blueman fish git openssh stow yay cliphist gvfs hyprpicker hyprpolkitagent network-manager-applet pavucontrol power-profiles-daemon python-pywal rofi rofi-emoji swayfx swaync sway-systemd thunar thunar-volman waybar wl-clip-persist xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
 ```
 
 ## Packages
@@ -60,7 +60,7 @@ yay -S ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color bluez bluez-obex bluez
 - rofi
 - rofi-emoji
 - swayfx
-- swatnc
+- swaync
 - sway-systemd
 - thunar
 - thunar-volman
