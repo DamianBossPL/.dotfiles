@@ -11,22 +11,23 @@ if [ "$1" = "-r" ]; then
   STATUS=$?
 
   if [ $STATUS -ne 0 ]; then
-    pkill hyprpicker
+    killall -s 9 hyprpicker
     exit 1
   fi
 
   canberra-gtk-play -i screen-capture &
   grim -g "$SLURP" "$LOCATION" &
   GRIM_PID=$!
-  
-  pkill hyprpicker
 # Full Screen
 else
   SCREEN=$(swaymsg -t get_outputs --raw | jq '. | map(select(.focused == true)) | .[0].name' -r)
   canberra-gtk-play -i screen-capture &
-  grim -o "$SCREEN" "$LOCATION"
+  grim -o "$SCREEN" "$LOCATION" &
+  GRIM_PID=$!
 fi
 
 wait $GRIM_PID
+killall -s 9 hyprpicker
+
 wl-copy < "$LOCATION"
 notify-send -u "normal" "Screenshot saved" "Image copied to the clipboard"
