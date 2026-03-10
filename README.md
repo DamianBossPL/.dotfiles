@@ -1,4 +1,4 @@
-> [!WARNING] This dotifles repo is in pre-alpha, meaning it's incomplete and not fully usable. Do not use this on your main system unless you know what you're doing.
+> [!WARNING] This dotifles repo is in alpha, meaning it's incomplete and not fully usable. Do not use this on your main system unless you know what you're doing.
 
 <div align="center">
   <h1> <——— DamianBossPL's .dotfiles ———></h1>
@@ -20,7 +20,7 @@
 ### Full
 
 ```sh
-yay -S fish git stow yay ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color swayfx python-pywal wpgtk libadwaita-without-adwaita hyprpicker waybar network-manager-applet power-profiles-daemon pavucontrol swaync rofi rofi-emoji lxqt-policykit xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gvfs thunar thunar-volman cliphist wl-clip-persist bluez bluez-obex bluez-utils blueman
+yay -S fish git stow yay ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color swayfx python-pywal wpgtk libadwaita-without-adwaita hyprpicker waybar network-manager-applet power-profiles-daemon pavucontrol swaync rofi rofi-emoji swaylock lxqt-policykit xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gvfs thunar thunar-volman cliphist wl-clip-persist bluez bluez-obex bluez-utils blueman
 ```
 
 ### No GUI
@@ -82,6 +82,8 @@ yay -S fish git stow yay
   - Menu application
 - `rofi-emoji`
   - Rofi mode to pick emoji
+- `swaylock`
+  - Lock screen
 - `lxqt-policykit`
   - Polkit agent
 
