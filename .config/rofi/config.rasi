@@ -13,12 +13,14 @@ configuration {
     directories-first: true;
     sorting-method: "name";
   }
+  display-drun: " Apps";
 }
 
 #window {
   background-color: transparent;
   border: none;
   margin: 0;
+  width: 40%;
 }
 #mainbox {
   border: 1;
@@ -37,6 +39,10 @@ configuration {
   background-color: @background;
 }
 #element {
-  padding: 1px;
+  padding: 2px;
   spacing: 0px;
+  cursor: default;
+}
+#entry {
+  placeholder: "Search";
 }
