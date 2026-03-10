@@ -1,0 +1,42 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+	font: "Agave Nerd Font Propo 10";
+	sort: true;
+	sorting-method: "fzf";
+	case-sensitive: false;
+  timeout {
+    action: "kb-cancel";
+    delay:  0;
+  }
+  filebrowser {
+    directories-first: true;
+    sorting-method: "name";
+  }
+}
+
+#window {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+#mainbox {
+  border: 1;
+  border-radius: 0;
+  border-color: @foreground;
+  background-color: @background;
+  padding: 8px;
+}
+#error-message {
+  border: 1;
+  border-radius: 0;
+  border-color: @foreground;
+  padding: 8px;  
+}
+#message {
+  background-color: @background;
+}
+#element {
+  padding: 1px;
+  spacing: 0px;
+}
