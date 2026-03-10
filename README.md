@@ -20,13 +20,13 @@
 ### Full
 
 ```sh
-yay -S ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color bluez bluez-obex bluez-utils blueman fish git openssh stow yay cliphist gvfs hyprpicker hyprpolkitagent network-manager-applet pavucontrol power-profiles-daemon python-pywal rofi rofi-emoji swayfx swaync sway-systemd thunar thunar-volman waybar wl-clip-persist xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+yay -S fish git stow yay ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color swayfx python-pywal wpgtk libadwaita-without-adwaita hyprpicker waybar network-manager-applet power-profiles-daemon pavucontrol swaync rofi rofi-emoji lxqt-policykit xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gvfs thunar thunar-volman cliphist wl-clip-persist bluez bluez-obex bluez-utils blueman
 ```
 
 ### No GUI
 
 ```sh
-yay -S
+yay -S fish git stow yay
 ```
 
 </details>
