@@ -1,13 +1,6 @@
 fish_add_path ~/.local/bin /usr/local/bin
 
 set -gx XDG_DATA_DIRS "$HOME/.local/share:$XDG_DATA_DIRS"
-# set -gx XCURSOR_THEME Posy_Cursor
-# set -gx XCURSOR_SIZE 32
-# set -gx QT_QPA_PLATFORMTHEME gtk3
-# dbus-update-activation-environment --systemd QT_QPA_PLATFORMTHEME
-# set -gx QT_WAYLAND_DISABLE_WINDOWDECORATION 1
-# set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
-# set -gx WLR_RENDER_NO_EXPLICIT_SYNC 1
 set -gx TERMINAL foot
 set -gx EDITOR vim
 
