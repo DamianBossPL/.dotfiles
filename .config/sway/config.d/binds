@@ -38,7 +38,7 @@ bindsym $context+Z              exec killall pw-play-mic
 # --- WM --- #
 bindsym $context+L exec loginctl lock-session # Lock River
 bindsym $context+P exec systemctl sleep # G O  T O  S L E E P
-bindsym $panic+Return exec swaymsg exit
+bindsym $panic+Return exec uwsm stop
 bindsym $panic+P exec ~/.local/bin/find-phone
 # Window Control
 bindsym Alt+F4 kill

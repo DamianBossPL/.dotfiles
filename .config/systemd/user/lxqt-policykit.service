@@ -1,0 +1,11 @@
+[Unit]
+Description=LXQt PolicyKit Authentication Agent
+PartOf=wayland-session@sway.target
+After=wayland-session@sway.target
+
+[Service]
+ExecStart=/usr/bin/lxqt-policykit-agent
+Restart=on-failure
+
+[Install]
+WantedBy=wayland-session@sway.target

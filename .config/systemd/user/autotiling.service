@@ -1,0 +1,11 @@
+[Unit]
+Description=Sway Autotiling
+PartOf=wayland-session@sway.target
+After=wayland-session@sway.target
+
+[Service]
+ExecStart=/usr/bin/autotiling
+Restart=on-failure
+
+[Install]
+WantedBy=wayland-session@sway.target
