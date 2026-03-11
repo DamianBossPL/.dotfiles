@@ -1,1 +1,13 @@
-/home/damian/.config/systemd/user/gamemoded.service
+[Unit]
+Description=gamemoded
+PartOf=wayland-session@sway.target
+After=wayland-session@sway.target
+
+[Service]
+Type=dbus
+BusName=com.feralinteractive.GameMode
+NotifyAccess=main
+ExecStart=/usr/bin/gamemoded
+
+[Install]
+WantedBy=wayland-session@sway.target
