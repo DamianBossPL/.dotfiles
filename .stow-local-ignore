@@ -1,5 +1,6 @@
 .git
 install.sh
+pull.sh
 README.md
 .gitignore
 .gitmodules
