@@ -81,7 +81,7 @@ function fish_prompt
   set_color --reset
 end
 
-if set -q SSH_CONNECTION
+if test -f /usr/bin/notify-send -a set -q SSH_CONNECTION
   set USER_IP $(echo $SSH_CONNECTION | awk '{print $1}')
   notify-send --urgency=critical "Incoming SSH" "$USER_IP"
 
