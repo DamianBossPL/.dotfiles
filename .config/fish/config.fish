@@ -7,7 +7,33 @@ set -gx EDITOR vim
 if status is-login
   # Start Sway on tty1 
   if test -z "$WAYLAND_DISPLAY" -a (tty) = "/dev/tty1"
-    exec uwsm start sway
+    if test -f /usr/bin/uwsm
+      exec uwsm start sway
+    else if test -f /usr/bin/sway
+      # Replicate uwsm env behaviour
+      # DINIT SUPPORTED ONLY
+
+      set -x XDG_CURRENT_DESKTOP sway:wlroots
+      set -x XDG_SESSION_DESKTOP sway
+      dinitctl setenv XDG_CURRENT_DESKTOP=sway:wlroots
+      dinitctl setenv XDG_SESSION_DESKTOP=sway
+
+      while read -l line
+        # Remove 'export ' prefix and split by '='
+        set -l kv (string replace 'export ' '' -- $line | string split -m 1 '=')
+        if test (count $kv) -eq 2
+          set -l key $kv[1]
+          set -l val (string trim -c '"' -- $kv[2])
+          
+          set -gx $key $val 
+          dinitctl setenv "$key=$val"
+        end
+      end < ~/.config/uwsm/env
+
+      dbus-update-activation-environment --all
+
+      exec sway
+    end
   end
 end
 
