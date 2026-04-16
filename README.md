@@ -1,4 +1,4 @@
-> [!WARNING] This dotifles repo is in alpha, meaning it's incomplete and not fully usable. Do not use this on your main system unless you know what you're doing.
+> [!WARNING] This dotifles repo is in pre-alpha, meaning it's incomplete and not fully usable. Do not use this on your main system unless you know what you're doing.
 
 <div align="center">
   <h1> <——— DamianBossPL's .dotfiles ———></h1>
@@ -14,30 +14,26 @@
 
 ![Image of SwayFX, featuring Visual Studio Code, btop, and foot terminal with fastfetch and fish](./desktop.png)
 
+## Setup
+
+This script abstracts the process of installing the dotfiles repo:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh | sh
+```
+
 <details>
   <summary>Install</summary>
-
-### Full
-
-```sh
-yay -S fish git stow yay ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color swayfx python-pywal wpgtk libadwaita-without-adwaita hyprpicker waybar network-manager-applet power-profiles-daemon pavucontrol swaync rofi rofi-emoji swaylock lxqt-policykit xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gvfs thunar thunar-volman cliphist wl-clip-persist bluez bluez-obex bluez-utils blueman
-```
-
-### No GUI
-
-```sh
-yay -S fish git stow yay
-```
 
 </details>
 
 <details>
   <summary>Packages</summary>
 
-### Base
+## Base
 
 - `fish`
-  - Default, super fast shell
+  - Default and fast shell
 - `git`
   - Version control
 - `stow`
@@ -45,74 +41,105 @@ yay -S fish git stow yay
 - `yay`
   - AUR helper
 
-### Desktop
+## Desktop
 
-#### Fonts
+### Fonts
 
 - `ttf-agave-nerd`
   - Default font
-- `ttf-ms-win11-auto`
+- `ttf-ms-fonts`
   - Every other needed font
 - `ttf-twemoji-color`
   - Emoji font
 
-#### Environment
+### Environment
 
+- `uwsm`
+  - Wayland session manager
 - `swayfx`
-  - Window Manager
-- `python-pywal`
-  - Color scheme generator
-- `wpgtk`
-  - Generates gtk theme off pywal
-- `libadwaita-without-adwaita`
-  - Fixes theming for libadwaita
-- `hyprpicker`
-  - Color picker and screen freezer
+  - Tiling WM
 - `waybar`
   - Status bar
-- `network-manager-applet`
-  - Tray applet for NetworkManager
-- `power-profiles-daemon`
-  - Modes for power usage
-- `pavucontrol`
-  - Audio control
+- `rofi`
+  - Application launcher and dmenu
+- `foot`
+  - Minimal Wayland terminal
 - `swaync`
   - Notification daemon and centre
-- `rofi`
-  - Menu application
-- `rofi-emoji`
-  - Rofi mode to pick emoji
 - `swaylock`
   - Lock screen
+- `hyprpicker`
+  - Color picker and screen freezer for screenshots
 - `lxqt-policykit`
   - Polkit agent
+- `wl-clipboard`
+  - CLI copy/paste utilities
+- `wl-clip-persist`
+  - Persists copied content after the source has closed
 
-#### XDP
+### Styling
+
+- `matugen`
+  - Material You color scheme generator
+- `libadwaita-without-adwaita`
+  - Fixes theming for libadwaita
+- `kvantum`
+  - QT6 theming
+- `kvantum-qt5`
+  - QT5 theming
+
+### Desktop Portals
 
 - `xdg-desktop-portal`
   - Daemon to make portals accessible
 - `xdg-desktop-portal-gtk`
   - Generic portal
-- `xdg-desktop-portal-hyprland`
-  - Replacement for XDP wlroots
+- `xdg-desktop-portal-slr`
+  - Screen sharing
 
-#### File Management
+## Desktop Apps
 
-- `gvfs`
-  - Trash, protocols, mounting flash drives, etc
+- `zen-browser-bin`
+  - Firefox-based browser
+- `vesktop-bin`
+  - Vesktop Discord client
+- `btop`
+  - System Monitor
+- `pavucontrol`
+  - Audio control
+
+### File Management
+
 - `thunar`
   - File manager
 - `thunar-volman`
   - Allows removable devices
+- `gvfs`
+  - Trash, protocols, mounting flash drives, etc
+- `yazi`
+  - TUI file manager
 
-#### Clipboard
+## Extra (Full System)
 
-- `cliphist`
-  - Allows clipboard history
-- `wl-clip-persist`
-  - Persists copy on source's close
+- `auto-cpufreq`
+  - Modes for power usage
+- `gamemode`
+  - Daemon for applying system settings when running games
 
-#### Bluetooth
+### Sound
+
+- `pipewire`
+  - Main audio server
+- `pipewire-audio`
+  - Pipewire audio support
+- `pipewire-alsa`
+  - Pipewire alsa support
+- `pipewire-pulse`
+  - Pipewire PulseAudio support
+- `wireplumber`
+  - Pipewire session manager
+
+### Bluetooth
 
 - `bluez`
   - Bluetooth daemon
@@ -121,6 +148,5 @@ yay -S fish git stow yay
 - `bluez-utils`
   - CLI tools for bluez
 - `blueman`
-  - Tray applet
-
-</details>
+  - Bluetooth GUI manager
+  </details>

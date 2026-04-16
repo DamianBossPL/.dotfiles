@@ -1,0 +1,13 @@
+[Unit]
+Description=Foot Server
+After=graphical-session.target
+
+[Service]
+Type=exec
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots" ""
+ExecStart=/usr/bin/foot -s
+Restart=on-failure
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=graphical-session.target

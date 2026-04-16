@@ -1,0 +1,13 @@
+[Unit]
+Description=Sway Autotiling
+After=graphical-session.target
+
+[Service]
+Type=exec
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "sway" ""
+ExecStart=/usr/bin/autotiling
+Restart=on-failure
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=graphical-session.target

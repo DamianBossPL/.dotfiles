@@ -1,0 +1,8 @@
+#!/bin/bash
+
+trap 'kill $(jobs -p)' EXIT
+
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+
+exec wl-clip-persist --clipboard regular

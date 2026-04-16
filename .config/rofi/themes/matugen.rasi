@@ -1,0 +1,84 @@
+* {
+  text-color: @on-surface;
+}
+
+window {
+  background-color: @surface;
+  text-color: @on-surface;
+
+  border: 1px;
+  border-color: @outline;
+  border-radius: 16px;
+
+  width: 700px;
+  height: 464px; 
+  padding: 16px;
+
+  children: [mainbox];
+}
+
+mainbox {
+  children: [inputbar,listview];
+}
+
+inputbar {
+  background-color: @surface-container;
+  text-color: @on-surface;
+
+  border-radius: 8px;
+  padding: 8px;
+
+  children: [prompt,entry];
+  spacing: 8px;
+}
+
+prompt, entry {
+  text-color: @on-surface;
+
+  placeholder: "Search";
+  placeholder-color: @outline;
+}
+
+listview {
+  padding: 8px 0 0 0;
+  spacing: 0;
+  border: 0;
+
+  lines: 8;
+}
+
+scrollbar {
+  handle-color: @outline-variant;
+  handle-rounded-corners: true;
+}
+
+element {
+  border-radius: 8px;
+
+  margin: 0;
+  spacing: 8px;
+  padding: 8px;
+
+  cursor: default;
+}
+
+element-icon {
+  size: 32px;
+  cursor: inherit;
+}
+
+element-text {
+  background-color: inherit;
+  text-color:       inherit;
+  vertical-align: 0.5;
+}
+
+element normal normal, element alternate normal {
+  background-color: transparent;
+  text-color: @on-surface;
+}
+
+element selected.normal {
+  background-color: @primary;
+  text-color: @on-primary;
+}

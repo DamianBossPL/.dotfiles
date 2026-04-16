@@ -1,0 +1,13 @@
+[Unit]
+Description=Wayland clipboard manager with support for multimedia 
+After=graphical-session.target
+
+[Service]
+Type=exec
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots" ""
+ExecStart=%h/.config/sway/scripts/cliphist
+Restart=on-failure
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=graphical-session.target

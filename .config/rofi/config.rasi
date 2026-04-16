@@ -1,4 +1,5 @@
-@import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "colors.rasi"
+@import "theme.rasi"
 
 configuration {
 	font: "Agave Nerd Font Propo 10";
@@ -13,36 +14,5 @@ configuration {
     directories-first: true;
     sorting-method: "name";
   }
-  display-drun: " Apps";
-}
-
-#window {
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  width: 40%;
-}
-#mainbox {
-  border: 1;
-  border-radius: 0;
-  border-color: @foreground;
-  background-color: @background;
-  padding: 8px;
-}
-#error-message {
-  border: 1;
-  border-radius: 0;
-  border-color: @foreground;
-  padding: 8px;  
-}
-#message {
-  background-color: @background;
-}
-#element {
-  padding: 2px;
-  spacing: 0px;
-  cursor: default;
-}
-#entry {
-  placeholder: "Search";
+  show-icons: false;
 }

@@ -1,55 +1,95 @@
-@import "../../.cache/wal/colors-waybar.css";
+/* @import "../../.cache/wal/colors-waybar.css"; */
+@import "colors.css";
 
 window#waybar {
   background-color: transparent;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-  background-color: @background;
-  border-radius: 0px;
-  font-weight: bold;
-  padding: 0px 12px;
-}
-
 .modules-left {
-  padding-right: 0px;
-  border-bottom-right-radius: 16px;
-}
-
-.modules-center {
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  margin-left: 8px;
 }
 
 .modules-right {
-  border-bottom-left-radius: 16px;
+  margin-right: 8px;
+}
+
+/* Targets inside module groups. I don't want to write each module group */
+window#waybar > .horizontal > .horizontal > widget > * {
+  background-color: alpha(@surface, 0.63);
+  /* background-color: alpha(@surface, 0.63); */
+  color: @on_surface;
+  border: 1px solid @outline_variant;
+  border-radius: 9999px;
+  margin-top: 8px;
+  padding: 0px 12px;
+  min-height: 30px;
+  font-weight: bold;
+  min-width: 20px;
+}
+
+/* Spacing for groups */
+window#waybar
+  > .horizontal
+  > .horizontal
+  > widget
+  > .horizontal:not(.module)
+  > widget
+  > * {
+  margin: 0 8px;
+}
+
+/* Remove space for left module */
+window#waybar
+  > .horizontal
+  > .horizontal
+  > widget
+  > .horizontal:not(.module)
+  > widget:first-child
+  > * {
+  margin-left: 0px;
+}
+
+/* Remove space for right module */
+window#waybar
+  > .horizontal
+  > .horizontal
+  > widget
+  > .horizontal:not(.module)
+  > widget:last-child
+  > * {
+  margin-right: 0px;
+}
+
+/* Fuck css for needing extemely specific selectors to override shit  */
+window#waybar > .horizontal > .horizontal > widget > #workspaces {
+  padding: 0;
+}
+
+window#waybar > .horizontal > .horizontal > widget > #workspaces {
+  padding: 0 2px;
 }
 
 #workspaces button {
   all: unset;
+  min-width: 36px;
+  margin: 4px 2px;
   padding: 0px;
-  min-width: 32px;
-  color: @foreground;
-}
-
-#workspaces button:last-child {
-  border-bottom-right-radius: 16px;
+  color: @on_surface;
+  border-radius: 9999px;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background: @color2;
-  color: @background;
+  background: @primary;
+  color: @on_primary;
 }
 
 #workspaces button.urgent {
-  background: @color3;
-  color: @background;
+  background: @error;
+  color: @on_error;
 }
 
 #workspaces button:hover {
-  background: @foreground;
+  background: @on_background;
   color: @background;
 }

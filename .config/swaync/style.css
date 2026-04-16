@@ -1,10 +1,10 @@
-@import "../../.cache/wal/colors.css";
+@import "colors.css";
 
 :root {
   --notification-icon-size: 32px;
-  --bg-color: var(--background);
-  --text-color: var(--foreground);
-  --border-color: var(--foreground);
+  --bg-color: color-mix(in srgb, @surface, transparent 37%);
+  --text-color: @on_surface;
+  --border-color: @outline;
 }
 
 * {
@@ -14,7 +14,6 @@
 
 .notification:hover {
   background: var(--bg-color);
-  border: 1px solid var(--border-color);
   box-shadow: none;
 }
 
@@ -35,7 +34,6 @@
 }
 
 .notification-content {
-  background: transparent;
   color: var(--text-color);
 }
 
@@ -53,7 +51,7 @@
   background: alpha(var(--bg-color), 0.9);
   margin: 3px;
   opacity: 0.9;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: 16px;
   color: var(--text-color);
 }
@@ -65,6 +63,6 @@
   box-shadow: none;
 }
 
-.image {
-  margin-right: 12px;
+.notification-content .text-box {
+  margin-left: 6px;
 }

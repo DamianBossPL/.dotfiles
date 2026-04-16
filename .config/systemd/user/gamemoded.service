@@ -1,0 +1,14 @@
+[Unit]
+Description=gamemoded
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=com.feralinteractive.GameMode
+NotifyAccess=main
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots" ""
+ExecStart=/usr/bin/gamemoded
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,18 +1,23 @@
 {
   "layer": "top",
-  "spacing": 12,
-  "height": 32,
+  "spacing": 8,
+  "height": 0,
   "modules-left": ["power-profiles-daemon", "sway/workspaces"],
-  "modules-center": ["tray"],
+  "modules-center": ["mpris", "clock"],
   "modules-right": [
-    "cpu",
-    "memory",
-    "temperature",
-    "pulseaudio",
-    "battery",
-    "clock",
+    "tray",
+    "group/sys-soft",
+    "group/sys-hard",
     "custom/notification"
   ],
+  "group/sys-hard": {
+    "orientation": "horizontal",
+    "modules": ["cpu", "memory", "temperature"]
+  },
+  "group/sys-soft": {
+    "orientation": "horizontal",
+    "modules": ["pulseaudio", "battery"]
+  },
   "custom/notification": {
     "tooltip": true,
     "format": "<span size='11pt'>{icon}</span>",
@@ -32,6 +37,18 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "mpris": {
+    "format-playing": "{player_icon} {dynamic}",
+    "format": "{status_icon} {dynamic}",
+    "dynamic-order": ["artist", "title"],
+    "status-icons": { "playing": "", "paused": "", "stopped": "" },
+    "player-icons": {
+      "default": "",
+      "spotify": "",
+      "firefox": "󰈹",
+      "mpv": ""
+    }
   },
   "tray": {
     "icon-size": 16,
@@ -63,7 +80,7 @@
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 90,
     "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", "", ""]
   },
   "battery": {
     "interval": 10,
@@ -89,7 +106,7 @@
   "memory": {
     "interval": 1,
     "tooltip": false,
-    "format": " {used} GiB"
+    "format": " {used} GiB"
   },
   "pulseaudio": {
     "scroll-step": 2,

@@ -1,0 +1,81 @@
+[config]
+version_check = false
+fallback_color = "#0549a4"
+prefer = "darkness"
+caching = false
+
+[config.wallpaper]
+command = "awww img --transition-type center --transition-fps 255 --transition-duration 1 '{{image}}'"
+set = true
+
+[templates.btop]
+input_path = 'templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.cava]
+input_path = "templates/cava.ini"
+output_path = "~/.config/cava/themes/matugen"
+post_hook = "pkill -USR1 cava"
+
+[templates.discord]
+input_path = "templates/discord.css"
+output_path = "~/.config/vesktop/themes/midnight-discord.css"
+
+[templates.foot]
+input_path = "templates/foot.ini"
+output_path = "~/.config/foot/colors.ini"
+
+[templates.gtk3]
+input_path = "templates/gtk3.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+post_hook = "gsettings set org.gnome.desktop.interface gtk-theme ''; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
+
+[templates.gtk4]
+input_path = "templates/gtk4.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.kvantum_kvconfig]
+input_path = "templates/kvantum.kvconfig"
+output_path = "~/.config/Kvantum/matugen/matugen.kvconfig"
+
+[templates.kvantum_svg]
+input_path = "templates/kvantum.svg"
+output_path = "~/.config/Kvantum/matugen/matugen.svg"
+
+[templates.pywalfox]
+input_path = "templates/wal-colors.json"
+output_path = "~/.cache/wal/colors.json"
+post_hook = "pywalfox update"
+
+[templates.rofi]
+input_path = "templates/rofi.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.sway]
+input_path = "templates/sway.conf"
+output_path = "~/.config/sway/colors.conf"
+post_hook = "swaymsg reload"
+
+[templates.swaync]
+input_path = "templates/colors.css"
+output_path = "~/.config/swaync/colors.css"
+post_hook = "swaync-client -rs"
+
+[templates.terminal-sequences]
+input_path = "templates/terminal-sequences"
+output_path = "~/.cache/terminal-sequences"
+post_hook = "~/.config/matugen/cat-sequences.sh"
+
+[templates.wal-colors]
+input_path = "templates/wal-colors"
+output_path = "~/.cache/wal/colors"
+
+[templates.waybar]
+input_path = "templates/colors.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.yazi]
+input_path = "templates/yazi.toml"
+output_path = "~/.config/yazi/theme.toml"
