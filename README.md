@@ -40,6 +40,8 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
   - Applies dotfiles
 - `yay`
   - AUR helper
+- `jq`
+  - CLI JSON processor
 
 ## Desktop
 
@@ -72,6 +74,8 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
   - Minimal Wayland terminal
 - `swaync`
   - Notification daemon and centre
+- `swayidle`
+  - Idle management
 - `swaylock`
   - Lock screen
 - `hyprpicker`
