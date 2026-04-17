@@ -40,12 +40,12 @@ Packages listed here are under headers, corresponding to the installable profile
   - Default and fast shell
 - `git`
   - Version control
+- `jq`
+  - CLI JSON processor
 - `stow`
   - Applies dotfiles
 - `yay`
   - AUR helper
-- `jq`
-  - CLI JSON processor
 
 ## Desktop
 
@@ -60,45 +60,45 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ### Environment
 
-- `swayfx`
-  - Tiling WM
-- `xorg-xwayland`
-  - Support for X under Wayland
 - `autotiling`
   - Dwindle tiling for Sway
 - `awww`
-  - Wallpaper
-- `waybar`
-  - Status bar
-- `rofi`
-  - Application launcher and dmenu
-- `rofi-emoji`
-  - Emoji picker
+  - Wallpaper daemon
 - `foot`
   - Minimal Wayland terminal
-- `swaync`
-  - Notification daemon and centre
-- `swayidle`
-  - Idle management
-- `swaylock`
-  - Lock screen
+- `gnome-keyring`
+  - Stores passwords and encryption keys
 - `hyprpicker`
   - Color picker and screen freezer for screenshots
 - `lxqt-policykit`
   - Polkit agent
+- `rofi`
+  - Application launcher and dmenu
+- `rofi-emoji`
+  - Emoji picker
+- `swayfx`
+  - Tiling WM
+- `swayidle`
+  - Idle management
+- `swaylock`
+  - Lock screen
+- `swaync`
+  - Notification daemon and centre
+- `waybar`
+  - Status bar
 - `wl-clipboard`
   - CLI copy/paste utilities
 - `wl-clip-persist`
   - Persists copied content after the source has closed
-- `gnome-keyring`
-  - Stores passwords and encryption keys
+- `xorg-xwayland`
+  - Support for X under Wayland
 
 #### Systemd
 
-- `uwsm`
-  - Wayland session manager
 - `runapp`
   - Fast application runner for uwsm
+- `uwsm`
+  - Wayland session manager
 
 #### Dinit
 
@@ -107,16 +107,16 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ### Styling
 
-- `matugen`
-  - Material You color scheme generator
-- `libadwaita-without-adwaita`
-  - Fixes theming for libadwaita
 - `adw-gtk3-theme`
   - Consistent libadwaita theming foTK
 - `kvantum`
   - QT6 theming
 - `kvantum-qt5`
   - QT5 theming
+- `libadwaita-without-adwaita`
+  - Fixes theming for libadwaita
+- `matugen`
+  - Material You color scheme generator
 
 ### Desktop Portals
 
@@ -134,26 +134,26 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ### File Management
 
+- `7zip`
+  - Support for 7z files
+- `android-udev`
+  - Allow connection of android devices
+- `gvfs`
+  - Trash, protocols, mounting flash drives, etc
 - `thunar`
   - File manager
-- `thunar-volman`
-  - Allows removable devices
 - `thunar-archive-plugin`
   - Adds archive support to thunar
 - `thunar-media-tags-plugin`
   - Add features for media files
-- `android-udev`
-  - Allow connection of android devices
+- `thunar-volman`
+  - Allows removable devices
 - `unrar`
   - Support for rar files
-- `7zip`
-  - Support for 7z files
-- `zip`
-  - Support for zip files
-- `gvfs`
-  - Trash, protocols, mounting flash drives, etc
 - `yazi`
   - TUI file manager
+- `zip`
+  - Support for zip files
 
 ## Background
 
@@ -161,10 +161,10 @@ Packages listed here are under headers, corresponding to the installable profile
 
 - `pipewire`
   - Main audio server
-- `pipewire-audio`
-  - Pipewire audio support
 - `pipewire-alsa`
   - Pipewire alsa support
+- `pipewire-audio`
+  - Pipewire audio support
 - `pipewire-pulse`
   - Pipewire PulseAudio support
 - `wireplumber`
@@ -178,53 +178,67 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ### Bluetooth
 
+- `blueman`
+  - Bluetooth GUI manager
 - `bluez`
   - Bluetooth daemon
 - `bluez-obex`
   - Bluetooth obex support
 - `bluez-utils`
   - CLI tools for bluez
-- `blueman`
-  - Bluetooth GUI manager
 
 ## Damian's Suite
 
-- `zen-browser-bin`
-  - Firefox-based browser
-- `vesktop-bin`
-  - Vesktop Discord client
-- `btop`
-  - System Monitor
-- `pavucontrol`
-  - Audio control
-- `iwgtk`
-  - GTK 4 iwd manager
-- `mpv`
-  - Media player
-- `mpv`
-  - Mpris support for mpv
-- `obs-studio`
-  - Recording software
-- `obs-cmd`
-  - CLI to control obs-studio
-- `helvum`
-  - Pipewire patch bay
-- `easyeffects`
-  - Add audio effects to input/output
-- `calf`
-  - Effects for EasyEffects
-- `lsp-plugins-lv2`
-  - Effects for EasyEffects
-- `flatpak`
-  - Run sandoxed software
 - `auto-cpufreq`
   - Modes for power usage
+- `baobab`
+  - Disk usage analyzer
+- `btop`
+  - System Monitor
+- `bun`
+  - High performance TS/JS runtime
+- `calf`
+  - Effects for EasyEffects
+- `cmatrix`
+  - Matrix TUI to scare people
+- `easyeffects`
+  - Add audio effects to input/output
+- `flatpak`
+  - Run sandoxed software
 - `gamemode`
   - Daemon for applying system settings when running games
-- `tailscale`
-  - Easy mesh VPN to stay connected with devices
+- `gnome-font-viewer`
+  - View all fonts on the system
+- `gtk4-demos`
+  - Showcase GTK theming
 - `gvfs-smb`
   - Allow gvfs to connect with SMB
+- `helvum`
+  - Pipewire patch bay
+- `inkspace`
+  - SVG editing
+- `iwgtk`
+  - GTK 4 iwd manager
+- `kdenlive`
+  - Video editing
+- `krita`
+  - Picture editing
+- `lsp-plugins-lv2`
+  - Effects for EasyEffects
+- `mpv`
+  - Media player
+- `mpv-mpris`
+  - Mpris support for mpv
+- `obs-cmd`
+  - CLI to control obs-studio
+- `obs-studio`
+  - Recording software
+- `openssh`
+  - SSH client
+- `pavucontrol`
+  - Audio control
+- `prismlauncher`
+  - Minecraft launcher
 - `spotify`
   - Music streaming
 - `spotify-adblock`
@@ -233,34 +247,20 @@ Packages listed here are under headers, corresponding to the installable profile
   - Games
 - `swayimg`
   - Image viewer
-- `baobab`
-  - Disk usage analyzer
-- `ydotool`
-  - Simulate keyboard/mouse
-- `bun`
-  - High performance TS/JS runtime
-- `cmatrix`
-  - Matrix TUI to scare people
-- `gnome-font-viewer`
-  - View all fonts on the system
-- `gtk4-demos`
-  - Showcase GTK theming
-- `inkspace`
-  - SVG editing
-- `kdenlive`
-  - Video editing
-- `krita`
-  - Picture editing
-- `openssh`
-  - SSH client
-- `prismlauncher`
-  - Minecraft launcher
+- `tailscale`
+  - Easy mesh VPN to stay connected with devices
+- `vesktop-bin`
+  - Vesktop Discord client
 - `wine`
   - Run Windows programs
 - `wine-mono`
   - Wine .NET
 - `winetricks`
   - Configure Wine stuff
+- `ydotool`
+  - Simulate keyboard/mouse
+- `zen-browser-bin`
+  - Firefox-based browser
 
 #### Dinit
 
