@@ -48,6 +48,8 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ### Fonts
 
+- `noto-fonts-cjk`
+  - CJK fonts
 - `ttf-agave-nerd`
   - Default font
 - `ttf-ms-fonts`
@@ -145,6 +147,8 @@ Packages listed here are under headers, corresponding to the installable profile
   - Add features for media files
 - `thunar-volman`
   - Allows removable devices
+- `tumbler`
+  - Thumbnailer
 - `unrar`
   - Support for rar files
 - `yazi`
@@ -262,6 +266,7 @@ Packages listed here are under headers, corresponding to the installable profile
 #### Dinit
 
 - `auto-cpufreq-dinit`
+- `tailscale-dinit`
 
 ## Dinit
 

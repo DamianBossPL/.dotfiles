@@ -55,12 +55,12 @@ profiles=(
   ["base:dinit"]="artix-archlinux-support turnstile-dinit"
   ["base:dinit:post"]="sudo dinitctl enable turnstiled"
 
-  ["desktop"]="ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr"
+  ["desktop"]="noto-fonts-cjk ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr"
   ["desktop:systemd"]="runapp uwsm"
   ["desktop:systemd:post"]="systemctl --user enable autotiling awww cliphist foot lxqt-policykit swayidle swaync swaysounds waybar"
   ["desktop:dinit"]="dex"
 
-  ["desktop-apps"]="cava 7zip android-udev gvfs thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman unrar yazi zip"
+  ["desktop-apps"]="cava 7zip android-udev gvfs thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler unrar yazi zip"
   
   ["background"]="pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber blueman bluez bluez-obex bluez-utils"
   ["background:systemd:post"]="systemctl --user enable pipewire pipewire-pulse wireplumber bluetooth"
@@ -69,7 +69,7 @@ profiles=(
 
   ["suite"]="auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkscape iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin visual-studio-code-bin wine wine-gecko wine-mono winetricks ydotool zen-browser-bin"
   ["suite:systemd:post"]="systemctl --user enable gamemoded"
-  ["suite:dinit"]="auto-cpufreq-dinit"
+  ["suite:dinit"]="auto-cpufreq-dinit tailscale-dinit"
 )
 
 INIT=$(ps -p 1 -o comm=)
