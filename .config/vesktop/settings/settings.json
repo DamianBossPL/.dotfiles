@@ -155,7 +155,7 @@
             "type": 2,
             "timestampMode": 3,
             "buttonOneText": "ArchWiki",
-            "startTime": 1717065864000,
+            "startTime": 1703784279000,
             "appName": "the sudo gods",
             "details": "Artix Linux",
             "state": "x86_64",
@@ -164,7 +164,7 @@
             "imageBig": "",
             "detailsURL": "",
             "stateURL": "",
-            "buttonOneURL": "https://wiki.artixlinux.org",
+            "buttonOneURL": "https://wiki.archlinux.org",
             "buttonTwoText": "My Website",
             "buttonTwoURL": "https://dbpl.dev",
             "imageBigTooltip": "",
@@ -731,7 +731,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1776465258637
+        "settingsSyncVersion": 1776468771733
     },
     "uiElements": {
         "chatBarButtons": {
