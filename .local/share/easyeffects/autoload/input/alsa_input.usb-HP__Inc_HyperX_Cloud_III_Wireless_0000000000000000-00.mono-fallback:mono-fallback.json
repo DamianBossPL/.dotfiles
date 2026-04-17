@@ -1,0 +1,6 @@
+{
+    "device": "alsa_input.usb-HP__Inc_HyperX_Cloud_III_Wireless_0000000000000000-00.mono-fallback",
+    "device-description": "HyperX Cloud III Wireless Mono",
+    "device-profile": "mono-fallback",
+    "preset-name": "HyperX Cloud III Wireless"
+}
