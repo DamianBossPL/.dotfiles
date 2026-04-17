@@ -265,6 +265,6 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ## Dinit
 
-- `tunstile-dinit`
+- `turnstile-dinit`
 
   </details>
