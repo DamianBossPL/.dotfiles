@@ -8,10 +8,18 @@ if status is-login
   # Start Sway on tty1 
   if test -z "$WAYLAND_DISPLAY" -a (tty) = "/dev/tty1"
     if test -f /usr/bin/uwsm
+      if test -f ~/.config/sway/config.d/autostart.conf
+        mv ~/.config/sway/config.d/autostart ~/.config/sway/config.d/autostart
+      end
+
       exec uwsm start sway
     else if test -f /usr/bin/sway
       # Replicate uwsm env behaviour
       # SYSTEMD & DINIT SUPPORTED ONLY
+      if test -f ~/.config/sway/config.d/autostart
+        mv ~/.config/sway/config.d/autostart ~/.config/sway/config.d/autostart.conf
+      end
+
       set init "$(ps -p 1 -o comm=)"
       function add_env -a key val
         set -gx $key $val
