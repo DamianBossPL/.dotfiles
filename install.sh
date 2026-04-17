@@ -52,8 +52,8 @@ stow-files() {
 declare -A profiles
 profiles=(
   ["base"]="fish git jq stow yay"
-  ["base:dinit"]="tunstile-dinit"
-  ["base:dinit:post"]="sudo dinitctl enable tunstiled"
+  ["base:dinit"]="artix-archlinux-support turnstile-dinit"
+  ["base:dinit:post"]="sudo dinitctl enable turnstiled"
 
   ["desktop"]="ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr"
   ["desktop:systemd"]="runapp uwsm"
@@ -67,7 +67,7 @@ profiles=(
   ["background:dinit"]="pipewire-dinit pipewire-pulse-dinit wireplumber-dinit bluez-dinit"
   ["background:dinit:post"]="dinitctl enable pipewire && dinitctl enable pipewire-pulse && dinitctl enable wireplumber && dinitctl enable bluetoothd"
 
-  ["suite"]="auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkspace iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin wine wine-mono winetricks ydotool zen-browser-bin"
+  ["suite"]="auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkscape iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin visual-studio-code-bin wine wine-gecko wine-mono winetricks ydotool zen-browser-bin"
   ["suite:systemd:post"]="systemctl --user enable gamemoded"
   ["suite:dinit"]="auto-cpufreq-dinit"
 )
