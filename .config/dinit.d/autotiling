@@ -1,0 +1,4 @@
+type     = process
+command  = /usr/bin/autotiling
+restart  = true
+log-type = buffer

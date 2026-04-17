@@ -1,0 +1,3 @@
+#!/bin/bash
+sway
+dinitctl stop sway-session

@@ -1,0 +1,4 @@
+type     = process
+command  = /usr/bin/foot -s
+restart  = true
+log-type = buffer

@@ -11,28 +11,39 @@ if status is-login
       exec uwsm start sway
     else if test -f /usr/bin/sway
       # Replicate uwsm env behaviour
-      # DINIT SUPPORTED ONLY
+      # SYSTEMD & DINIT SUPPORTED ONLY
+      set init "$(ps -p 1 -o comm=)"
+      function add_env -a key val
+        set -gx $key $val
 
-      set -x XDG_CURRENT_DESKTOP sway:wlroots
-      set -x XDG_SESSION_DESKTOP sway
-      dinitctl setenv XDG_CURRENT_DESKTOP=sway:wlroots
-      dinitctl setenv XDG_SESSION_DESKTOP=sway
+        if test "$init" = "systemd"
+          systemctl --user set-environment "$key=$val" 
+        else if test "$init" = "dinit"
+          dinitctl setenv "$key=$val"
+        end 
+      end
+
+      add_env XDG_CURRENT_DESKTOP sway:wlroots
+      add_env XDG_SESSION_DESKTOP sway
 
       while read -l line
+        if string match -q "#*" -- "$line"
+          continue
+        end
+
         # Remove 'export ' prefix and split by '='
         set -l kv (string replace 'export ' '' -- $line | string split -m 1 '=')
         if test (count $kv) -eq 2
           set -l key $kv[1]
           set -l val (string trim -c '"' -- $kv[2])
           
-          set -gx $key $val 
-          dinitctl setenv "$key=$val"
+          add_env $key $val 
         end
       end < ~/.config/uwsm/env
 
       dbus-update-activation-environment --all
-
-      exec sway
+      
+      exec ~/.config/sway/scripts/sway-init
     end
   end
 end

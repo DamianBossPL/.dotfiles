@@ -1,0 +1,4 @@
+type     = process
+command  = /usr/lib/xdg-desktop-portal-gtk
+restart  = true
+log-type = buffer
