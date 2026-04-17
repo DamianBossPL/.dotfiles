@@ -1,7 +1,7 @@
 > [!WARNING] This dotifles repo is in pre-alpha, meaning it's incomplete and not fully usable. Do not use this on your main system unless you know what you're doing.
 
 <div align="center">
-  <h1> <——— DamianBossPL's .dotfiles ———></h1>
+<h1> <——— DamianBossPL's .dotfiles ———></h1>
 
 ![](https://img.shields.io/github/last-commit/DamianBossPL/.dotfiles?style=for-the-badge&logo=git&labelColor=000000&color=0549a4&logoColor=da578b)
 ![](https://img.shields.io/github/repo-size/DamianBossPL/.dotfiles?style=for-the-badge&logo=files&labelColor=000000&color=0549a4&logoColor=da578b)
@@ -12,7 +12,7 @@
   <h1> <——— OVERVIEW ———></h1>
 </div>
 
-![Image of SwayFX, featuring Visual Studio Code, btop, and foot terminal with fastfetch and fish](./desktop.png)
+![Image of the SwayFX environment with the dotfiles applied](./desktop.png)
 
 _Arch Linux systemd, and Artix Linux dinit supported only._
 
@@ -55,13 +55,15 @@ Packages listed here are under headers, corresponding to the installable profile
   - Default font
 - `ttf-ms-fonts`
   - Every other needed font
-- `ttf-twemoji-color`
+- `ttf-twemoji`
   - Emoji font
 
 ### Environment
 
 - `swayfx`
   - Tiling WM
+- `xorg-xwayland`
+  - Support for X under Wayland
 - `autotiling`
   - Dwindle tiling for Sway
 - `awww`
@@ -70,6 +72,8 @@ Packages listed here are under headers, corresponding to the installable profile
   - Status bar
 - `rofi`
   - Application launcher and dmenu
+- `rofi-emoji`
+  - Emoji picker
 - `foot`
   - Minimal Wayland terminal
 - `swaync`
@@ -86,6 +90,8 @@ Packages listed here are under headers, corresponding to the installable profile
   - CLI copy/paste utilities
 - `wl-clip-persist`
   - Persists copied content after the source has closed
+- `gnome-keyring`
+  - Stores passwords and encryption keys
 
 #### Systemd
 
@@ -105,6 +111,8 @@ Packages listed here are under headers, corresponding to the installable profile
   - Material You color scheme generator
 - `libadwaita-without-adwaita`
   - Fixes theming for libadwaita
+- `adw-gtk3-theme`
+  - Consistent libadwaita theming foTK
 - `kvantum`
   - QT6 theming
 - `kvantum-qt5`
@@ -121,14 +129,8 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ## Desktop Apps
 
-- `zen-browser-bin`
-  - Firefox-based browser
-- `vesktop-bin`
-  - Vesktop Discord client
-- `btop`
-  - System Monitor
-- `pavucontrol`
-  - Audio control
+- `cava`
+  - TUI audio visualiser
 
 ### File Management
 
@@ -136,21 +138,24 @@ Packages listed here are under headers, corresponding to the installable profile
   - File manager
 - `thunar-volman`
   - Allows removable devices
+- `thunar-archive-plugin`
+  - Adds archive support to thunar
+- `thunar-media-tags-plugin`
+  - Add features for media files
+- `android-udev`
+  - Allow connection of android devices
+- `unrar`
+  - Support for rar files
+- `7zip`
+  - Support for 7z files
+- `zip`
+  - Support for zip files
 - `gvfs`
   - Trash, protocols, mounting flash drives, etc
 - `yazi`
   - TUI file manager
 
-## Extra (Full System)
-
-- `auto-cpufreq`
-  - Modes for power usage
-- `gamemode`
-  - Daemon for applying system settings when running games
-
-#### Dinit
-
-- `autocpu-freq-dinit`
+## Background
 
 ### Sound
 
@@ -181,6 +186,85 @@ Packages listed here are under headers, corresponding to the installable profile
   - CLI tools for bluez
 - `blueman`
   - Bluetooth GUI manager
+
+## Damian's Suite
+
+- `zen-browser-bin`
+  - Firefox-based browser
+- `vesktop-bin`
+  - Vesktop Discord client
+- `btop`
+  - System Monitor
+- `pavucontrol`
+  - Audio control
+- `iwgtk`
+  - GTK 4 iwd manager
+- `mpv`
+  - Media player
+- `mpv`
+  - Mpris support for mpv
+- `obs-studio`
+  - Recording software
+- `obs-cmd`
+  - CLI to control obs-studio
+- `helvum`
+  - Pipewire patch bay
+- `easyeffects`
+  - Add audio effects to input/output
+- `calf`
+  - Effects for EasyEffects
+- `lsp-plugins-lv2`
+  - Effects for EasyEffects
+- `flatpak`
+  - Run sandoxed software
+- `auto-cpufreq`
+  - Modes for power usage
+- `gamemode`
+  - Daemon for applying system settings when running games
+- `tailscale`
+  - Easy mesh VPN to stay connected with devices
+- `gvfs-smb`
+  - Allow gvfs to connect with SMB
+- `spotify`
+  - Music streaming
+- `spotify-adblock`
+  - Block ads on spotify
+- `steam`
+  - Games
+- `swayimg`
+  - Image viewer
+- `baobab`
+  - Disk usage analyzer
+- `ydotool`
+  - Simulate keyboard/mouse
+- `bun`
+  - High performance TS/JS runtime
+- `cmatrix`
+  - Matrix TUI to scare people
+- `gnome-font-viewer`
+  - View all fonts on the system
+- `gtk4-demos`
+  - Showcase GTK theming
+- `inkspace`
+  - SVG editing
+- `kdenlive`
+  - Video editing
+- `krita`
+  - Picture editing
+- `openssh`
+  - SSH client
+- `prismlauncher`
+  - Minecraft launcher
+- `wine`
+  - Run Windows programs
+- `wine-mono`
+  - Wine .NET
+- `winetricks`
+  - Configure Wine stuff
+
+#### Dinit
+
+- `autocpu-freq-dinit`
 
 ## Dinit
 
