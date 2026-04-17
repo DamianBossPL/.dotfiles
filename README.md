@@ -24,6 +24,8 @@ This script abstracts the process of installing the dotfiles repo:
 curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh | sh
 ```
 
+Or, download the repo and run `./install.sh`
+
 <details>
   <summary>Packages</summary>
 
