@@ -14,6 +14,8 @@
 
 ![Image of SwayFX, featuring Visual Studio Code, btop, and foot terminal with fastfetch and fish](./desktop.png)
 
+_Arch Linux systemd, and Artix Linux dinit supported only._
+
 ## Setup
 
 This script abstracts the process of installing the dotfiles repo:
@@ -29,6 +31,8 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
 
 <details>
   <summary>Packages</summary>
+
+Packages listed here are under headers, corresponding to the installable profiles in the setup script. Some profles may include different packages due to the host's init system. For example, a systemd host will install uwsm, whilst a dinit host will not. However, much of the functionality shouldn't be compromised due to this.
 
 ## Base
 
@@ -54,12 +58,8 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
 
 ### Environment
 
-- `uwsm`
-  - Wayland session manager
 - `swayfx`
   - Tiling WM
-- `dex`
-  - Autostart apps
 - `autotiling`
   - Dwindle tiling for Sway
 - `awww`
@@ -82,6 +82,16 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
   - CLI copy/paste utilities
 - `wl-clip-persist`
   - Persists copied content after the source has closed
+
+#### Systemd
+
+- `uwsm`
+  - Wayland session manager
+
+#### Dinit
+
+- `dex`
+  - Autostart apps
 
 ### Styling
 
@@ -132,6 +142,10 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
 - `gamemode`
   - Daemon for applying system settings when running games
 
+#### Dinit
+
+- `autocpu-freq-dinit`
+
 ### Sound
 
 - `pipewire`
@@ -145,6 +159,12 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
 - `wireplumber`
   - Pipewire session manager
 
+#### Dinit
+
+- `pipewire-dinit`
+- `pipewire-pulse-dinit`
+- `wireplumber-dinit`
+
 ### Bluetooth
 
 - `bluez`
@@ -155,4 +175,9 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
   - CLI tools for bluez
 - `blueman`
   - Bluetooth GUI manager
+
+## Dinit
+
+- `tunstile-dinit`
+
   </details>
