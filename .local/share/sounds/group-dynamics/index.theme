@@ -1,0 +1,6 @@
+[Sound Theme]
+Name=Group Dynamics
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo
