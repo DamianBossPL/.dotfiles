@@ -25,11 +25,6 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
 ```
 
 <details>
-  <summary>Install</summary>
-
-</details>
-
-<details>
   <summary>Packages</summary>
 
 Packages listed here are under headers, corresponding to the installable profiles in the setup script. Some profles may include different packages due to the host's init system. For example, a systemd host will install uwsm, whilst a dinit host will not. However, much of the functionality shouldn't be compromised due to this.
