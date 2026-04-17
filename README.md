@@ -87,6 +87,8 @@ Packages listed here are under headers, corresponding to the installable profile
 
 - `uwsm`
   - Wayland session manager
+- `runapp`
+  - Fast application runner for uwsm
 
 #### Dinit
 
