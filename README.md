@@ -104,7 +104,7 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
   - Daemon to make portals accessible
 - `xdg-desktop-portal-gtk`
   - Generic portal
-- `xdg-desktop-portal-slr`
+- `xdg-desktop-portal-wlr`
   - Screen sharing
 
 ## Desktop Apps
