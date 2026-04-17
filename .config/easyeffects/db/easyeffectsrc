@@ -1,0 +1,30 @@
+[EffectsPipelines]
+ignoreSystemNotifications=false
+
+[StreamInputs]
+inputDevice=alsa_input.usb-HP__Inc_HyperX_Cloud_III_Wireless_0000000000000000-00.mono-fallback
+mostUsedPresets=YouTuber,loud,Default
+plugins=stereo_tools#0,rnnoise#0,equalizer#0,compressor#0
+usedPresets=Default:6,YouTuber:21,loud:12
+visiblePage=pluginsPage
+visiblePlugin=compressor#0
+
+[StreamOutputs]
+mostUsedPresets=HyperX Cloud III Wireless,Default
+outputDevice=alsa_output.usb-HP__Inc_HyperX_Cloud_III_Wireless_0000000000000000-00.analog-stereo
+plugins=equalizer#0
+usedPresets=HyperX Cloud III Wireless:16,Default:1
+visiblePage=pluginsPage
+visiblePlugin=equalizer#0
+
+[Style]
+forceBreezeTheme=false
+
+[Window]
+autostartOnLogin=true
+height=1382
+lastLoadedInputPreset=HyperX Cloud III Wireless
+lastLoadedOutputPreset=HyperX Cloud III Wireless
+showTrayIcon=false
+visiblePage=inputPage
+width=2542
