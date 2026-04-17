@@ -259,7 +259,7 @@ Packages listed here are under headers, corresponding to the installable profile
 
 #### Dinit
 
-- `autu-cpufreq-dinit`
+- `auto-cpufreq-dinit`
 
 ## Dinit
 
