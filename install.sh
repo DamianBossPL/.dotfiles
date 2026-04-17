@@ -2,81 +2,102 @@
 
 cd "$(dirname "$0")"
 
-print() {
-  echo "[DOTFILES] $1"
+export NEWT_COLORS='
+  root=,default
+  window=,default
+  border=white,default
+  shadow=,default
+  title=white,default
+  textbox=white,default
+  listbox=white,default
+  actlistbox=white,blue
+  button=white,red
+  compactbutton=white,default
+'
+
+whiptail() {
+  command whiptail --title "DamianBossPL's .dotfiles" "$@"
 }
 
-usage() {
-
-  exit 1
+prompt_profile() { 
+  whiptail \
+    --menu "Select a package profile" 20 40 5 \
+    --ok-button "Preview" \
+    --cancel-button "Exit" \
+    --notags \
+    "base" "Base" \
+    "desktop" "Desktop" \
+    "desktop-apps" "Desktop Apps" \
+    "background" "Background" \
+    "suite" "Damian's Suite" \
+    3>&1 1>&2 2>&3
 }
 
-prompt() {  
-  local selection=$(NEWT_COLORS="root=white,black" whiptail --title "DamianBossPL's .dotfiles" \
-    --menu "Pick an install profile" 15 30 4 \
-    "1" "CLI Only" \
-    "2" "Full" \
-    3>&1 1>&2 2>&3)
-    
-  if [ $? -eq 0 ]; then
-    echo "$selection"
-  else
-    echo 0
-  fi
+prompt_install() {
+  whiptail \
+    --yesno "You are about to install these packages:\n\n$1" 20 75 \
+    3>&1 1>&2 2>&3
 }
 
-install-packages() {
-  print "RUN: install packages"
-  # yay -S --needed "${packages[@]}"
-  print "DONE: install packages"
+prompt_stow() { 
+  whiptail \
+    --yesno "Do you want to first apply configurations?\n\n$(pwd) $ stow --adopt ." 10 75 \
+    3>&1 1>&2 2>&3
 }
 
 stow-files() {
-  print "RUN: stowing"
   stow --adopt .
-  print "DONE: stowing"
 }
 
-SYSTEMD_UNITS=(anyrun autotiling foot gamemoded lxqt-policykit swaync swww thunar waybar)
-systemd-enable() {
-  print "RUN: enable systemd user units"
-  systemctl --user enable "${SYSTEMD_UNITS[@]}"
-  print "DONE: enable systemd user units"
-}
+declare -A profiles
+profiles=(
+  ["base"]="fish git jq stow yay"
+  ["base:dinit"]="tunstile-dinit"
+  ["base:dinit:post"]="sudo dinitctl enable tunstiled"
 
-level1=(fish git stow yay)
-level2=(ttf-agave-nerd ttf-ms-win11-auto ttf-twemoji-color swayfx python-pywal wpgtk libadwaita-without-adwaita hyprpicker waybar network-manager-applet power-profiles-daemon pavucontrol swaync rofi rofi-emoji swaylock lxqt-policykit pipewire pipewire-audio pipewire-alsa pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gvfs thunar thunar-volman cliphist wl-clip-persist bluez bluez-obex bluez-utils blueman)
+  ["desktop"]="ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr"
+  ["desktop:systemd"]="runapp uwsm"
+  ["desktop:systemd:post"]="systemctl --user enable autotiling awww cliphist foot lxqt-policykit swayidle swaync swaysounds waybar"
+  ["desktop:dinit"]="dex"
 
-packages=()
+  ["desktop-apps"]="cava 7zip android-udev gvfs thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman unrar yazi zip"
+  
+  ["background"]="pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber blueman bluez bluez-obex bluez-utils"
+  ["background:systemd:post"]="systemctl --user enable pipewire pipewire-pulse wireplumber bluetooth"
+  ["background:dinit"]="pipewire-dinit pipewire-pulse-dinit wireplumber-dinit bluez-dinit"
+  ["background:dinit:post"]="dinitctl enable pipewire && dinitctl enable pipewire-pulse && dinitctl enable wireplumber && dinitctl enable bluetoothd"
 
-CHOICE=$(prompt)
-case "$CHOICE" in
-  "1")
-    print "Installing profile: CLI Only"
+  ["suite"]="auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkspace iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin wine wine-mono winetricks ydotool zen-browser-bin"
+  ["suite:systemd:post"]="systemctl --user enable gamemoded"
+  ["suite:dinit"]="auto-cpufreq-dinit"
+)
 
-    packages+=("${level1[@]}")
-    install-packages
+INIT=$(ps -p 1 -o comm=)
 
-    stow-files
-    ;;
-  "2")
-    print "Installing profile: Full"
+if prompt_stow; then
+  stow-files
+fi
 
-    packages+=("${level1[@]}")
-    packages+=("${level2[@]}")
-    install-packages
+while true; do
+  CHOICE=$(prompt_profile)
+  if [[ -z "$CHOICE" ]]; then
+    break
+  fi
+  
+  packages=$(echo "${profiles[$CHOICE]} ${profiles[$CHOICE:$INIT]}" | xargs)
+  if prompt_install "$packages"; then
+    cmd="yay -S --needed ${packages}"
 
-    stow-files
-    systemd-enable
-    ;;
-  "0")
-    print "Installation cancelled"
-    exit 1
-    ;;
-  *)
-    print "Selected choice invalid"
-    exit 1
-    ;;
-esac
+    echo "$cmd"
+    eval "$cmd"
 
-print "COMPLETE"
+    echo
+
+    cmd="${profiles[$CHOICE:$INIT:post]}"
+    echo "$cmd"
+    eval "$cmd"
+
+    read -rp "Press ENTER to continue"
+  fi
+done
+
