@@ -65,11 +65,12 @@ profiles=(
   ["background"]="pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber blueman bluez bluez-obex bluez-utils"
   ["background:systemd:post"]="systemctl --user enable pipewire pipewire-pulse wireplumber bluetooth"
   ["background:dinit"]="pipewire-dinit pipewire-pulse-dinit wireplumber-dinit bluez-dinit"
-  ["background:dinit:post"]="dinitctl enable pipewire && dinitctl enable pipewire-pulse && dinitctl enable wireplumber && dinitctl enable bluetoothd"
+  ["background:dinit:post"]="dinitctl enable pipewire && dinitctl enable pipewire-pulse && dinitctl enable wireplumber && sudo dinitctl enable bluetoothd"
 
   ["suite"]="auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkscape iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin visual-studio-code-bin wine wine-gecko wine-mono winetricks ydotool zen-browser-bin"
   ["suite:systemd:post"]="systemctl --user enable gamemoded"
   ["suite:dinit"]="auto-cpufreq-dinit tailscale-dinit"
+  ["suite:dinit:post"]="sudo dinitctl enable auto-cpufreq-dinit && sudo dinitctl enable tailscale-dinit"
 )
 
 INIT=$(ps -p 1 -o comm=)
