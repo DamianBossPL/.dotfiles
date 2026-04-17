@@ -1,0 +1,31 @@
+{
+    "discordBranch": "stable",
+    "minimizeToTray": true,
+    "arRPC": true,
+    "splashColor": "rgb(193, 199, 205)",
+    "splashBackground": "rgb(15, 20, 23)",
+    "audio": {
+        "granularSelect": false,
+        "deviceSelect": false,
+        "onlySpeakers": true
+    },
+    "customTitleBar": false,
+    "splashPixelated": false,
+    "tray": true,
+    "openLinksWithElectron": false,
+    "enableTaskbarFlashing": false,
+    "disableSmoothScroll": false,
+    "disableMinSize": true,
+    "clickTrayToShowHide": true,
+    "autoStartMinimized": true,
+    "hardwareAcceleration": false,
+    "enableSplashScreen": false,
+    "splashTheming": true,
+    "staticTitle": false,
+    "enableMenu": false,
+    "spellCheckLanguages": [
+        "en-GB",
+        "en"
+    ],
+    "hardwareVideoAcceleration": true
+}
