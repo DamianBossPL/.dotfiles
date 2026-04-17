@@ -1,0 +1,4 @@
+type     = process
+command  = /usr/bin/lxqt-policykit-agent
+restart  = true
+log-type = buffer

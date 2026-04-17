@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ -n "$UWSM_FINALIZE_VARNAMES" ]]; then
+  exec uwsm stop
+else
+  exec swaymsg exit
+fi

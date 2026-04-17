@@ -1,0 +1,4 @@
+type     = process
+command  = /usr/bin/sh -c "~/.config/sway/scripts/swaysounds"
+restart  = true
+log-type = buffer

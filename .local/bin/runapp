@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -n "$UWSM_ID" ]; then
+  exec runapp "$@"
+else
+  exec "$@"
+fi
