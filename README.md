@@ -58,6 +58,12 @@ curl -fsSL https://raw.githubusercontent.com/DamianBossPL/.dotfiles/main/pull.sh
   - Wayland session manager
 - `swayfx`
   - Tiling WM
+- `dex`
+  - Autostart apps
+- `autotiling`
+  - Dwindle tiling for Sway
+- `awww`
+  - Wallpaper
 - `waybar`
   - Status bar
 - `rofi`
