@@ -55,7 +55,7 @@ profiles=(
   ["base:dinit"]="artix-archlinux-support turnstile-dinit"
   ["base:dinit:post"]="sudo dinitctl enable turnstiled"
 
-  ["desktop"]="noto-fonts-cjk ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr"
+  ["desktop"]="noto-fonts noto-fonts-cjk ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr"
   ["desktop:systemd"]="runapp uwsm"
   ["desktop:systemd:post"]="systemctl --user enable autotiling awww cliphist foot lxqt-policykit swayidle swaync swaysounds waybar"
   ["desktop:dinit"]="dex"

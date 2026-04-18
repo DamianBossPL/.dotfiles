@@ -48,12 +48,14 @@ Packages listed here are under headers, corresponding to the installable profile
 
 ### Fonts
 
+- `noto-fonts`
+  - Base fonts
 - `noto-fonts-cjk`
   - CJK fonts
 - `ttf-agave-nerd`
   - Default font
 - `ttf-ms-fonts`
-  - Every other needed font
+  - Additonal fonts
 - `ttf-twemoji`
   - Emoji font
 
