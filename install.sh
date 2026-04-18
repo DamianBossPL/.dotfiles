@@ -70,7 +70,7 @@ profiles=(
   ["suite"]="auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkscape iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin visual-studio-code-bin wine wine-gecko wine-mono winetricks ydotool zen-browser-bin"
   ["suite:systemd:post"]="systemctl --user enable gamemoded"
   ["suite:dinit"]="auto-cpufreq-dinit tailscale-dinit"
-  ["suite:dinit:post"]="sudo dinitctl enable auto-cpufreq-dinit && sudo dinitctl enable tailscale-dinit"
+  ["suite:dinit:post"]="sudo dinitctl enable auto-cpufreq && sudo dinitctl enable tailscale-dinit"
 )
 
 INIT=$(ps -p 1 -o comm=)
