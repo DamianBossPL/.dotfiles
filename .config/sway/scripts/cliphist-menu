@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 selection=$(cliphist list | rofi -dmenu -i -p "cliphist")
 
