@@ -20,29 +20,29 @@
   "script-fail-notify": false,
   "scripts": {
     "notification-sound-by-name": {
-      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i \"$SWAYNC_SOUND_NAME\"",
+      "exec": "~/.config/swaync/scripts/name",
       "run-on": "receive",
       "sound-name": ".*"
     },
     "notification-sound-by-file": {
-      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -f \"$SWAYNC_SOUND_FILE\"",
+      "exec": "~/.config/swaync/scripts/file",
       "run-on": "receive",
       "sound-file": ".*"
     },
     "notification-sound-low": {
-      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i message",
+      "exec": "~/.config/swaync/scripts/low",
       "run-on": "receive",
       "urgency": "Low",
       "app-name": "^(?!discord|spotify|vesktop).*$"
     },
     "notification-sound-normal": {
-      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i message-new-instant",
+      "exec": "~/.config/swaync/scripts/normal",
       "run-on": "receive",
       "urgency": "Normal",
       "app-name": "^(?!discord|spotify|vesktop).*$"
     },
     "notification-sound-critical": {
-      "exec": "[[ $(swaync-client -D) == 'false' ]] && canberra-gtk-play -i dialog-error",
+      "exec": "~/.config/swaync/scripts/critical",
       "run-on": "receive",
       "urgency": "Critical",
       "app-name": "^(?!discord|spotify|vesktop).*$"

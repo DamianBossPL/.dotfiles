@@ -1,0 +1,2 @@
+#!/bin/sh
+[ "$(swaync-client -D)" = "false" ] && canberra-gtk-play -f "$SWAYNC_SOUND_FILE"

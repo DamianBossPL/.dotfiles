@@ -1,0 +1,2 @@
+#!/bin/sh
+[ "$(swaync-client -D)" = "false" ] && canberra-gtk-play -i message-new-instant
