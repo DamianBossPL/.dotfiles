@@ -1,4 +1,3 @@
-exec_always dinitctl setenv WAYLAND_DISPLAY DISPLAY SWAYSOCK I3SOCK
-exec dinitctl start sway-session
+exec sh -c "dinitctl setenv WAYLAND_DISPLAY DISPLAY SWAYSOCK I3SOCK && dinitctl start sway-session"
 
 exec /usr/bin/dex -a
