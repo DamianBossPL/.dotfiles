@@ -1,0 +1,32 @@
+#!/bin/sh
+
+theme=$(dconf read /org/gnome/desktop/sound/theme-name)
+theme=$(printf '%s' "$theme" | sed "s/'//g")
+
+play() {
+  paplay --property="media.role=event" --property="application.id=org.freedesktop.canberra" "$1.oga" 2>/dev/null
+}
+
+play_from_theme() {
+  if [ -d "$HOME/.local/share/sounds/$theme" ]; then
+    play "$HOME/.local/share/sounds/$theme/stereo/$1"
+  elif [ -d "/usr/local/share/sounds/$theme" ]; then
+    play "/usr/local/share/sounds/$theme/stereo/$1"
+  elif [ -d "/usr/share/sounds/$theme" ]; then
+    play "/usr/share/sounds/$theme/stereo/$1"
+  else
+    return 1
+  fi
+}
+
+if [ "$1" != "-i" ] && [ "${1#--id}" = "$1" ] || ! [ -n "$2" ]; then
+  exec /usr/bin/canberra-gtk-play "$@"
+fi
+
+if ! play_from_theme "$2"; then
+  theme="freedesktop"
+  if ! play_from_theme "$2"; then
+    echo "Failed to play sound: File or data not found"
+    exit 1
+  fi
+fi
