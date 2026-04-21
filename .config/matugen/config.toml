@@ -43,6 +43,10 @@ output_path = "~/.config/Kvantum/matugen/matugen.kvconfig"
 input_path = "templates/kvantum.svg"
 output_path = "~/.config/Kvantum/matugen/matugen.svg"
 
+[templates.obs]
+input_path = 'templates/obs.obt'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
+
 [templates.pywalfox]
 input_path = "templates/wal-colors.json"
 output_path = "~/.cache/wal/colors.json"
