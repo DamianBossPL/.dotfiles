@@ -1,6 +1,14 @@
 #!/bin/sh
 
+udev_pid=
+
 canberra-gtk-play -i desktop-login &
+
+trap_exit() {
+  kill "$udev_pid" 2>/dev/null
+  exit
+}
+trap trap_exit INT TERM EXIT
 
 udevadm monitor --udev --property | \
 while IFS= read -r line; do
@@ -29,4 +37,7 @@ while IFS= read -r line; do
     subsystem=""
     devtype=""
   fi
-done
+done &
+udev_pid=$!
+
+wait "$udev_pid"

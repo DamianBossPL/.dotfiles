@@ -61,21 +61,15 @@ get_profile() {
     "base")
       echo "fish git jq stow yay";;
     "base:dinit")
-      echo "artix-archlinux-support turnstile-dinit";;
+      echo "artix-archlinux-support backlight-dinit turnstile-dinit";;
     "base:dinit:post")
-      echo "sudo dinitctl enable turnstiled";;
+      echo "sudo dinitctl enable turnstiled && sudo dinitctl enable backlight";;
 
     "desktop")
-      echo "noto-fonts noto-fonts-cjk ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr";;
-    "desktop:systemd")
-      echo "runapp uwsm";;
-    "desktop:systemd:post")
-      echo "systemctl --user enable autotiling awww cliphist foot lxqt-policykit swayidle swaync swaysounds waybar";;
-    "desktop:dinit")
-      echo "dex";;
+      echo "noto-fonts noto-fonts-cjk ttf-agave-nerd ttf-ms-fonts ttf-twemoji autotiling awww dex foot gnome-keyring hyprpicker lxqt-policykit rofi rofi-emoji swayfx swayidle swaylock swaync waybar wl-clipboard wl-clip-persist xorg-xwayland adw-gtk3-theme kvantum kvantum-qt5 libadwaita-without-adwaita matugen xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr";;
 
     "desktop-apps")
-      echo "cava 7zip android-udev gvfs thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler unrar yazi zip";;
+      echo "cava 7zip android-udev ffmpegthumbnailer gvfs thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler unrar yazi zip";;
     
     "background")
       echo "pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber blueman bluez bluez-obex bluez-utils";;
@@ -84,12 +78,10 @@ get_profile() {
     "background:dinit")
       echo "pipewire-dinit pipewire-pulse-dinit wireplumber-dinit bluez-dinit";;
     "background:dinit:post")
-      echo "dinitctl enable pipewire && dinitctl enable pipewire-pulse && dinitctl enable wireplumber && sudo dinitctl enable bluetoothd";;
+      echo "sudo dinitctl enable bluetoothd";;
 
     "suite")
       echo "auto-cpufreq baobab btop bun calf cmatrix easyeffects flatpak gamemode gnome-font-viewer gtk4-demos gvfs-smb helvum inkscape iwgtk kdenlive krita lsp-plugins-lv2 mpv mpv-mpris obs-cmd obs-studio openssh pavucontrol prismlauncher spotify spotify-adblock steam swayimg tailscale vesktop-bin visual-studio-code-bin wine wine-gecko wine-mono winetricks ydotool zen-browser-bin";;
-    "suite:systemd:post")
-      echo "systemctl --user enable gamemoded";;
     "suite:dinit")
       echo "auto-cpufreq-dinit tailscale-dinit";;
     "suite:dinit:post")

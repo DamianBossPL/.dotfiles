@@ -1,0 +1,43 @@
+#!/bin/sh
+
+if ! [ "$1" = "--no-daemon" ]; then
+  "$0" --no-daemon "$@" > /dev/null 2>&1 &
+  exit 0
+fi
+
+pids_windows() {
+  swaymsg -t get_tree | grep -o '"pid": [0-9]*' | awk '{print $2}'
+}
+
+pids_children() {
+  pids=""
+  sway_pid=$(pgrep -f '^sway$' | head -1)
+
+  if [ -n "$sway_pid" ]; then
+    for pid in $(pgrep -P "$sway_pid" 2>/dev/null || true); do
+      pids="$pids $pid"
+    done
+  fi
+
+  echo "${pids#"${pids%%[![:space:]]*}"}"
+}
+
+is_alive() {
+  kill -0 "$1" 2>/dev/null
+}
+
+pids_all=$(echo "$(pids_windows)
+$(pids_children)" | xargs)
+
+# shellcheck disable=SC2086
+#printf "%s\n" $pids_all | while IFS= read -r pid; do
+#  kill "$pid"
+#  echo "$pid = $(ps -p "$pid" -o comm=)"
+#done
+
+# shellcheck disable=SC2086
+kill $pids_all
+# shellcheck disable=SC2086
+waitpid $pids_all
+
+swaymsg exit

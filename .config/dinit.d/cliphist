@@ -1,4 +1,0 @@
-type     = process
-command  = /usr/bin/sh -c "~/.config/sway/scripts/cliphist"
-restart  = true
-log-type = buffer

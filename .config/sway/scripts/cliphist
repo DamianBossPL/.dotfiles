@@ -1,8 +1,9 @@
 #!/bin/sh
 
-trap 'kill $(jobs -p)' EXIT
+trap 'kill $(jobs -p)' INT TERM EXIT
 
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
+wl-clip-persist --clipboard regular &
 
-exec wl-clip-persist --clipboard regular
+wait

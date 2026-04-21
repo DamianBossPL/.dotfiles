@@ -1,0 +1,71 @@
+#!/bin/sh
+
+THRESHOLD_LOW=15
+THRESHOLD_CRITICAL=5
+
+# 0 = notify any
+# 1 = notify critical
+# 2 = notify none
+notify=0
+capacity=
+periodic_pid=
+udev_pid=
+
+trap_exit() {
+  kill "$periodic_pid" "$udev_pid" 2>/dev/null
+  exit
+}
+trap trap_exit INT TERM EXIT
+
+notif() {
+  notify-send -u critical "Battery $1" "Charge your battery: $2%"  
+}
+
+pwatcher() {
+  while true; do
+    capacity=$(cat /sys/class/power_supply/BAT*/capacity)
+    if [ "$notify" -le 1 ] && [ "$capacity" -le $THRESHOLD_CRITICAL ]; then
+      notif "Critical" "$capacity"
+      notify=2
+    elif [ "$notify" -le 0 ] && [ "$capacity" -le $THRESHOLD_LOW ]; then
+      notif "Low" "$capacity"
+      notify=1
+    fi
+
+    sleep 30
+  done
+}
+
+create_pwatcher() {
+  pwatcher &
+  periodic_pid=$!
+}
+
+pwatcher_update() {
+  kill "$periodic_pid" 2>/dev/null
+
+  status=$(cat /sys/class/power_supply/BAT*/status)
+  if [ "$status" = "Not Charging" ]; then
+    notify=$2 
+  elif [ "$status" = "Charging" ]; then
+    notify=$1
+  elif [ "$status" = "Discharging" ]; then
+    notify=$2
+  fi
+  
+  pwatcher &  
+  periodic_pid=$!
+}
+
+pwatcher_update 2 0
+udevadm monitor -ks power_supply | \
+while IFS= read -r line; do
+  case "$line" in
+    *"BAT"*)
+        pwatcher_update 0 2
+      ;;
+  esac
+done &
+udev_pid=$!
+
+wait "$udev_pid"

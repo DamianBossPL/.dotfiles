@@ -1,4 +1,0 @@
-type     = process
-command  = /usr/lib/xdg-desktop-portal
-restart  = true
-log-type = buffer

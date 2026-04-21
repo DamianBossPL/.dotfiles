@@ -14,7 +14,7 @@
 
 ![Image of the SwayFX environment with the dotfiles applied](./desktop.png)
 
-_Arch Linux systemd, and Artix Linux dinit supported only._
+_Artix Linux dinit, and partial Arch Linux supported only._
 
 ## Setup
 
@@ -29,7 +29,7 @@ Or, download the repo and run `./install.sh`
 <details>
   <summary>Packages</summary>
 
-Packages listed here are under headers, corresponding to the installable profiles in the setup script. Some profles may include different packages due to the host's init system. For example, a systemd host will install uwsm, whilst a dinit host will not. However, much of the functionality shouldn't be compromised due to this.
+Packages listed here are under headers, corresponding to the installable profiles in the setup script. Some profles may include different packages due to the host's init system. For example, a dinit system will install service scripts related to packages. This is done to try maintain functionality across systems.
 
 ## Base
 
@@ -43,6 +43,15 @@ Packages listed here are under headers, corresponding to the installable profile
   - Applies dotfiles
 - `yay`
   - AUR helper
+
+#### Dinit
+
+- `artix-archlinux-support`
+  - Adds Arch Linux repos to Artix Linux
+- `backlight-dinit`
+  - Restores backlight brightness on boot
+- `turnstile-dinit`
+  - User process dinit
 
 ## Desktop
 
@@ -65,6 +74,8 @@ Packages listed here are under headers, corresponding to the installable profile
   - Dwindle tiling for Sway
 - `awww`
   - Wallpaper daemon
+- `dex`
+  - DesktopEntry autostart
 - `foot`
   - Minimal Wayland terminal
 - `gnome-keyring`
@@ -93,18 +104,6 @@ Packages listed here are under headers, corresponding to the installable profile
   - Persists copied content after the source has closed
 - `xorg-xwayland`
   - Support for X under Wayland
-
-#### Systemd
-
-- `runapp`
-  - Fast application runner for uwsm
-- `uwsm`
-  - Wayland session manager
-
-#### Dinit
-
-- `dex`
-  - Autostart apps
 
 ### Styling
 
@@ -139,6 +138,8 @@ Packages listed here are under headers, corresponding to the installable profile
   - Support for 7z files
 - `android-udev`
   - Allow connection of android devices
+- `ffmpegthumbnailer`
+  - Thumbnailing for videos
 - `gvfs`
   - Trash, protocols, mounting flash drives, etc
 - `thunar`
@@ -150,7 +151,7 @@ Packages listed here are under headers, corresponding to the installable profile
 - `thunar-volman`
   - Allows removable devices
 - `tumbler`
-  - Thumbnailer
+  - Thumbnailing for images
 - `unrar`
   - Support for rar files
 - `yazi`
@@ -269,9 +270,5 @@ Packages listed here are under headers, corresponding to the installable profile
 
 - `auto-cpufreq-dinit`
 - `tailscale-dinit`
-
-## Dinit
-
-- `turnstile-dinit`
 
   </details>

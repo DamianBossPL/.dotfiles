@@ -7,50 +7,7 @@ set -gx EDITOR vim
 if status is-login
   # Start Sway on tty1 
   if test -z "$WAYLAND_DISPLAY" -a (tty) = "/dev/tty1"
-    if test -f /usr/bin/uwsm
-      if test -f ~/.config/sway/config.d/autostart.conf
-        mv ~/.config/sway/config.d/autostart ~/.config/sway/config.d/autostart
-      end
-
-      exec uwsm start sway
-    else if test -f /usr/bin/sway
-      # Replicate uwsm env behaviour
-      # SYSTEMD & DINIT SUPPORTED ONLY
-      if test -f ~/.config/sway/config.d/autostart
-        mv ~/.config/sway/config.d/autostart ~/.config/sway/config.d/autostart.conf
-      end
-
-      set init "$(ps -p 1 -o comm=)"
-      function add_env -a key val
-        set -gx $key $val
-
-        if test "$init" = "systemd"
-          systemctl --user set-environment "$key=$val" 
-        else if test "$init" = "dinit"
-          dinitctl setenv "$key=$val"
-        end 
-      end
-
-      add_env XDG_CURRENT_DESKTOP sway:wlroots
-      add_env XDG_SESSION_DESKTOP sway
-
-      while read -l line
-        if string match -q "#*" -- "$line"
-          continue
-        end
-
-        # Remove 'export ' prefix and split by '='
-        set -l kv (string replace 'export ' '' -- $line | string split -m 1 '=')
-        if test (count $kv) -eq 2
-          set -l key $kv[1]
-          set -l val (string trim -c '"' -- $kv[2])
-          
-          add_env $key $val 
-        end
-      end < ~/.config/uwsm/env
-
-      dbus-update-activation-environment --all
-      
+    if test -f /usr/bin/sway
       exec ~/.config/sway/scripts/sway-init
     end
   end
@@ -129,6 +86,14 @@ end
 if test -f /usr/bin/notify-send && set -q SSH_CONNECTION
   set USER_IP $(echo $SSH_CONNECTION | awk '{print $1}')
   notify-send --urgency=critical "Incoming SSH" "$USER_IP"
+  
+  echo
+  echo "Hello, foreign user. By connecting, you have agreed to the following:"
+  echo "  - Your presence and source IP address have been reported to the host"
+  echo "  - Every command ran in the shell is reported to the host"
+  echo "  - The host reserves the right to close the connection without prior notice"
+  echo
+  sleep 2
 
   function on_exit --on-event fish_exit
     notify-send --urgency=normal "Closed SSH" "$USER_IP"

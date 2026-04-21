@@ -1,3 +1,36 @@
 #!/bin/sh
-sway
-dinitctl stop sway-session
+
+# init="$(ps -p 1 -o comm=)"
+
+add_env() {
+  export "$1"="$2"
+  
+  # if [ "$init" = "systemd" ]; then
+  #   systemctl --user set-environment "$key=$val" 
+  # elif [ "$init" = "dinit" ]; then
+  #   dinitctl setenv "$1=$2"
+  # fi
+}
+
+add_env XDG_SESSION_TYPE wayland
+add_env XDG_CURRENT_DESKTOP sway:wlroots
+add_env XDG_SESSION_DESKTOP sway
+
+while read -r line; do
+  case "$line" in
+    \#* | "") continue ;;
+  esac
+
+  clean_line=$(printf '%s' "$line" | sed -e 's/^export //' -e 's/^"//' -e 's/"$//')
+  key=${clean_line%%=*}
+  val=${clean_line#*=}
+
+  if [ "$key" != "$clean_line" ]; then
+    val=$(printf '%s' "$val" | sed -e 's/^"//' -e 's/"$//')
+    
+    add_env "$key" "$val"
+  fi
+done < ~/.config/sway/env
+dbus-update-activation-environment --all
+
+exec sway

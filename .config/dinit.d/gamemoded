@@ -1,4 +1,0 @@
-type     = process
-command  = /usr/bin/gamemoded
-restart  = true
-log-type = buffer
