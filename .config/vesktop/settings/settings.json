@@ -157,7 +157,7 @@
             "buttonOneText": "ArchWiki",
             "startTime": 1703784279000,
             "appName": "the sudo gods",
-            "details": "Artix Linux",
+            "details": "Artix Linux (dinit)",
             "state": "x86_64",
             "imageSmall": "",
             "imageSmallTooltip": "",
@@ -731,7 +731,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1776468771733
+        "settingsSyncVersion": 1776680375779
     },
     "uiElements": {
         "chatBarButtons": {
