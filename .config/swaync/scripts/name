@@ -1,2 +1,2 @@
 #!/bin/sh
-[ "$(swaync-client -D)" = "false" ] && canberra-gtk-play -f "$SWAYNC_SOUND_NAME"
+[ "$(swaync-client -D)" = "false" ] && canberra-gtk-play -i "$SWAYNC_SOUND_NAME"
