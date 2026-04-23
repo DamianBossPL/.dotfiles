@@ -5,39 +5,30 @@ if ! [ "$1" = "--no-daemon" ]; then
   exit 0
 fi
 
-pids_windows() {
-  swaymsg -t get_tree | grep -o '"pid": [0-9]*' | awk '{print $2}'
-}
+SWAY_PID=$(pgrep -u "$USER" -x sway)
+pid_kill_list=
 
-pids_children() {
-  pids=""
-  sway_pid=$(pgrep -f '^sway$' | head -1)
+while read -r pid; do
+  # Ignore self/thread-self
+  case "$pid" in
+    ''|*[!0-9]*) continue ;;
+  esac
 
-  if [ -n "$sway_pid" ]; then
-    for pid in $(pgrep -P "$sway_pid" 2>/dev/null || true); do
-      pids="$pids $pid"
-    done
+  # Don't kill self
+  if [ "$pid" -eq "$$" ]; then continue; fi
+  
+  ppid=$(ps -p "$pid" -o ppid= | tr -d ' ')
+  if [ "$ppid" = "$SWAY_PID" ] || [ "$ppid" = "1" ]; then
+    pid_kill_list="$pid_kill_list$pid "
   fi
+done <<EOF
+$(grep -l "SWAYSOCK=$SWAYSOCK" /proc/*/environ 2>/dev/null | cut -d/ -f3)
+EOF
 
-  echo "${pids#"${pids%%[![:space:]]*}"}"
-}
-
-is_alive() {
-  kill -0 "$1" 2>/dev/null
-}
-
-pids_all=$(echo "$(pids_windows)
-$(pids_children)" | xargs)
-
+pid_kill_list=$(echo "$pid_kill_list" | xargs)
 # shellcheck disable=SC2086
-#printf "%s\n" $pids_all | while IFS= read -r pid; do
-#  kill "$pid"
-#  echo "$pid = $(ps -p "$pid" -o comm=)"
-#done
-
+kill $pid_kill_list
 # shellcheck disable=SC2086
-kill $pids_all
-# shellcheck disable=SC2086
-waitpid $pids_all
+waitpid $pid_kill_list
 
 swaymsg exit
